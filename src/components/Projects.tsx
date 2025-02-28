@@ -1,5 +1,3 @@
-import React from 'react';
-
 const projects = [
   {
     title: 'Dubai Marina Development',
@@ -20,8 +18,8 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="py-20 bg-white" id="projects">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-30 bg-white" id="projects">
+      <div className="mx-auto px-4 sm:px-10 lg:px-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Recent Projects</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -31,10 +29,10 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div key={index} className="bg-blue-100 rounded-lg shadow-lg overflow-hidden">
               <div className="h-64 overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transform hover:scale-110 transition duration-500"
                 />

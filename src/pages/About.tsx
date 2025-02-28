@@ -1,26 +1,5 @@
-import React from 'react';
 import { Award, Shield, Users } from 'lucide-react';
-
-const leadership = [
-  {
-    name: 'Ahmed Al Rashid',
-    position: 'Chief Executive Officer',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80',
-    bio: 'Over 25 years of experience in construction and foundation engineering.'
-  },
-  {
-    name: 'Sarah Williams',
-    position: 'Technical Director',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80',
-    bio: 'PhD in Geotechnical Engineering with expertise in complex foundation systems.'
-  },
-  {
-    name: 'Mohammed Hassan',
-    position: 'Operations Director',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80',
-    bio: 'Specializes in project management and operational excellence.'
-  }
-];
+import AboutImage from '../assets/about.webp';
 
 const certifications = [
   {
@@ -40,61 +19,65 @@ const certifications = [
   }
 ];
 
+const groupOfCompanies = [
+  {
+    name: 'Green Oasis General Contracting Co. LLC',
+    description: 'Green Oasis General Contracting Co. L.L.C. (GOC), is dedicated and committed to providing the society at large with quality infrastructure in its field expertise which currently includes engineering, execution/construction of infrastructure projects, integrated water transmission & distribution projects, reservoirs, commercial & residential complexes.',
+    year: 2004
+  },
+  {
+    name: 'Fixperts',
+    description: 'Fixperts is a leading provider for building maintenance, repair and refurbishing services in the United Arab Emirates. Fixperts serves both residential as well...',
+    year: 2014
+  },
+  {
+    name: 'Fixperts Shop',
+    description: 'Fixperts Shop is the newest venture under Fixperts group that targets high-end, in-shop repair and instant services for electronics, watches, keys, shoes and miscellaneous items.',
+    year: 2021
+  },
+  {
+    name: 'Fixperts Fresh Living',
+    description: 'Fixperts Fresh Living provides a range of comprehensive professional cleaning services and disinfection treatment from commercial to residential clients.',
+    year: 2022
+  }
+];
+
 const About = () => {
   return (
-    <div className="pt-20">
-      {/* Hero Section */}
-      <div className="relative h-96 bg-gray-900">
-        <div className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
-          }}
-        />
-        <div className="relative h-full flex items-center justify-center text-center">
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About TerraCore</h1>
-            <p className="text-xl text-white">Building Strong Foundations Since 1944</p>
-          </div>
+    <div className="pt-40 bg-[#dbd9d6]">
+      <div className="flex justify-end max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-amber-950 pb-10">About Us</h1>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 bg-[#44b6ef]/70 mb-40 sm:px-20 lg:px-40">
+        <div className="flex flex-col gap-4 p-4">
+          <h2 className="text-4xl font-bold text-amber-950 mb-6">“In Depth”</h2>
+          <p className="text-xl text-gray-900">
+            At Terracore Piling and Foundation, we have built a legacy of excellence over the past 40 years, laying the groundwork for some of the most successful construction projects in the industry. Founded by Green Oasis General Contracting Co. LLC, we began with a focus on shoring works and have since expanded our expertise to include a wide range of foundation services, including piling, dewatering, and non-destructive testing. Our team is dedicated to providing reliable, safe, and efficient solutions that meet the unique challenges of each project.
+          </p>
+        </div>
+        <div className="flex flex-col gap-4 p-4 -mb-40">
+          <img src={AboutImage} alt="AboutImage" className="w-full" />
         </div>
       </div>
-
-      {/* Company History */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our History</h2>
             <p className="text-lg text-gray-600">
-              For over 79 years, TerraCore has been at the forefront of foundation engineering in the UAE. 
-              What started as a small local contractor has grown into a group of five specialized companies, 
+              For over 40 years, TerraCore has been at the forefront of foundation engineering in the UAE.
+              What started as a small local contractor has grown into a group of five specialized companies,
               each contributing to our comprehensive range of geotechnical solutions.
             </p>
           </div>
 
           {/* Group of Companies */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {[1, 2, 3, 4, 5].map((company) => (
-              <div key={company} className="bg-white rounded-lg shadow-lg p-8">
-                <h3 className="text-xl font-semibold mb-4">TerraCore {company}</h3>
-                <p className="text-gray-600">Specialized division focusing on specific aspects of foundation engineering and construction.</p>
+          <div className="flex flex-col gap-8 mb-20 px-4">
+            {groupOfCompanies.map((company) => (
+              <div key={company.name} className="bg-[#44b6ef]/70 rounded-lg shadow-lg p-8">
+                <h3 className="text-2xl font-semibold mb-4 text-gray-950">{company.name} -  {company.year}</h3>
+                <p className="text-gray-600">{company.description}</p>
               </div>
             ))}
-          </div>
-
-          {/* Leadership Team */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Leadership</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {leadership.map((leader) => (
-                <div key={leader.name} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <img src={leader.image} alt={leader.name} className="w-full h-64 object-cover" />
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{leader.name}</h3>
-                    <p className="text-blue-600 mb-4">{leader.position}</p>
-                    <p className="text-gray-600">{leader.bio}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Certifications */}
@@ -102,7 +85,7 @@ const About = () => {
             <h2 className="text-3xl font-bold text-center mb-12">Certifications & Standards</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {certifications.map((cert) => (
-                <div key={cert.name} className="text-center p-8 bg-white rounded-lg shadow-lg">
+                <div key={cert.name} className="text-center p-8 bg-[#44b6ef]/50 rounded-lg shadow-lg">
                   <div className="flex justify-center mb-4">
                     {cert.icon}
                   </div>

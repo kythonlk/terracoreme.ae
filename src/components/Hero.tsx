@@ -1,11 +1,10 @@
-
 const Hero = () => {
   return (
     <div className="relative h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("http://localhost:5173/cover.webp")'
+          backgroundImage: 'url("/cover.webp")'
         }}
       >
       </div>
@@ -16,7 +15,7 @@ const Hero = () => {
             Your Trusted Core Builder <br />for Strong Foundations
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl">
-            Terracore Piling and Foundation, founded by Green Oasis General Contracting Co. LLC, brings 40 years of industry expertise to every project. With a solid reputation for delivering reliable, high-quality services, we are committed to precision, safety, and excellence ....
+            Terracore Piling and Foundation, founded by Green Oasis General Contracting Co. LLC, brings 40 years of industry expertise to every project. With a solid reputation for delivering reliable, high-quality services, we are committed to precision, safety, and excellence
           </p>
         </div>
       </div>

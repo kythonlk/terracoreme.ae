@@ -1,9 +1,8 @@
-import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const ContactCTA = () => {
   return (
-    <div className="py-20 bg-blue-600">
+    <div className="py-20 bg-[#005aa7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
@@ -33,7 +32,7 @@ const ContactCTA = () => {
               <label className="block text-gray-700 mb-2">Name</label>
               <input
                 type="text"
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Your Name"
               />
             </div>
@@ -41,7 +40,7 @@ const ContactCTA = () => {
               <label className="block text-gray-700 mb-2">Email</label>
               <input
                 type="email"
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Your Email"
               />
             </div>
@@ -49,7 +48,7 @@ const ContactCTA = () => {
           <div className="mb-6">
             <label className="block text-gray-700 mb-2">Message</label>
             <textarea
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               rows={4}
               placeholder="Tell us about your project"
             ></textarea>

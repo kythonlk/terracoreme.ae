@@ -1,138 +1,155 @@
-import React from 'react';
-import { Drill, Building2, Mountain, Shield } from 'lucide-react';
+import s1 from '../assets/s1.png';
+import s2 from '../assets/s2.png';
+import s3 from '../assets/s3.png';
+import s4 from '../assets/s4.png';
+import Subservices from '../components/services/subservices';
 
 const services = [
   {
-    title: 'Piling & Foundation Services',
-    description: 'Comprehensive deep foundation solutions for all types of structures.',
-    image: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    details: [
-      'Bored Piles',
-      'Driven Piles',
-      'CFA Piles',
-      'Micro Piles',
-      'Pile Load Testing'
-    ]
+    id: 1,
+    title: 'Dewatering Works',
+    image:  s1
   },
   {
-    title: 'Shoring & Excavation Works',
-    description: 'Advanced shoring systems and deep excavation solutions.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    details: [
-      'Diaphragm Walls',
-      'Secant Pile Walls',
-      'Sheet Piling',
-      'Soldier Pile Walls',
-      'Deep Excavation'
-    ]
+    id: 2,
+    title: 'Shoring Works',
+    image: s2
   },
   {
-    title: 'Soil Investigation & Improvement',
-    description: 'Comprehensive ground engineering and soil enhancement solutions.',
-    image: 'https://images.unsplash.com/photo-1584467541268-b040f83be3fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    details: [
-      'Soil Investigation',
-      'Ground Improvement',
-      'Soil Stabilization',
-      'Dynamic Compaction',
-      'Vibro Compaction'
-    ]
+    id: 3,
+    title: 'Piling Works',
+    image: s3
   },
   {
-    title: 'Deep Foundations & Retaining Walls',
-    description: 'Specialized solutions for complex foundation requirements.',
-    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    details: [
-      'Anchored Walls',
-      'Reinforced Earth Walls',
-      'Gabion Walls',
-      'MSE Walls',
-      'Cantilever Walls'
-    ]
+    id: 4,
+    title: 'NDRC Works',
+    image: s4
   }
 ];
 
-const ServiceDetails = ({ service }: { service: typeof services[0] }) => (
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-    <div className="h-64 overflow-hidden">
-      <img 
-        src={service.image} 
-        alt={service.title}
-        className="w-full h-full object-cover transform hover:scale-110 transition duration-500"
-      />
-    </div>
-    <div className="p-8">
-      <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
-      <p className="text-gray-600 mb-6">{service.description}</p>
-      <ul className="space-y-2">
-        {service.details.map((detail, index) => (
-          <li key={index} className="flex items-center text-gray-700">
-            <Shield className="w-5 h-5 text-blue-600 mr-2" />
-            {detail}
-          </li>
-        ))}
-      </ul>
-      <button className="mt-8 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
-        Request Quote
-      </button>
-    </div>
-  </div>
-);
+const dewatering = {
+    id: 1,
+    title: 'Dewatering Works',
+    video: s1,
+    subTitle: 'Expertise in dewatering ensures that your project site remains safe, stable, and ready for construction, even in challenging groundwater conditions.',
+    subServices: [
+      {
+        title: 'Well Point',
+      },
+      {
+        title: 'Deep Well',
+      },
+      {
+        title: 'Sump Pump',
+      }
+    ]
+  }
+const shoring = {
+  id: 2,
+  title: 'Shoring Works',
+  video: s2,
+  subTitle: 'Specialize in shoring works, providing safe, reliable, and innovative solutions to support excavation and foundation projects.',
+  subServices: [
+    {
+      title: 'Trench Box',
+    },
+    {
+      title: 'Trench Sheeting with I Beam Support ',
+    },
+    {
+      title: 'Sheet Piling',
+    },
+    {
+      title: 'I beam and precast concrete panels',
+    }
+  ]
+}
+
+const piling = {
+  id: 3,
+  title: 'Piling Works',
+  video: s3,
+  subTitle: 'Specializes in piling works, offering advanced and reliable foundation solutions that ensure the stability and strength of your project from the ground up.',
+  subServices: [
+    {
+      title: 'Secant Piling ',
+    },
+    {
+      title: 'Bearing Piles',
+    },
+  ]
+}
+
+const ndrc = {
+  id: 4,
+  title: 'NDRC Works',
+  video: s4,
+  subTitle: 'Specialize in Non-Destructive Road Closing services, offering innovative solutions to safely close roads without causing significant disruption or damage.',
+  subServices: [
+    {
+      title: 'Horizontal Directional Drilling (HDD)',
+    },
+    {
+      title: 'Microtunelling',
+    },
+    {
+      title: 'Pipe Jacking',
+    },
+    {
+      title: 'Thrust Boring',
+    },
+
+]
+}
 
 const Services = () => {
   return (
-    <div className="pt-20">
-      {/* Hero Section */}
-      <div className="relative h-96 bg-gray-900">
-        <div className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
-          }}
-        />
-        <div className="relative h-full flex items-center justify-center text-center">
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Services</h1>
-            <p className="text-xl text-white">Comprehensive Foundation Solutions for Every Challenge</p>
-          </div>
+    <>
+    <div className="relative py-20" id="services">
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{ zIndex: 1 }}
+      >
+        <source src="/bg2.mp4" type="video/mp4" />
+      </video>
+      <div className="px-4 sm:px-10 lg:px-20 pt-20 relative z-10 bg-gray-900/10">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
+          <p className="text-lg text-gray-100 max-w-3xl mx-auto text-justify">
+            We have perfected our specialization in the industry of shoring works, where our expertise consistently meets the highest expectations for quality foundation solutions. With a focus on precision and safety, our trusted services include:
+          </p>
         </div>
-      </div>
 
-      {/* Services Section */}
-      <div className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {services.map((service, index) => (
-              <ServiceDetails key={index} service={service} />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Case Studies Section */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Featured Case Studies</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((study) => (
-              <div key={study} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img 
-                  src={`https://images.unsplash.com/photo-${study === 1 ? '1590674899484-d5640e854abe' : study === 2 ? '1541888946425-d81bb19240f5' : '1584467541268-b040f83be3fd'}?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80`}
-                  alt={`Case Study ${study}`}
-                  className="w-full h-48 object-cover"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white/40 rounded-lg shadow-lg overflow-hidden">
+              <div className="h-52 overflow-hidden flex items-end justify-center">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-40 h-40 object-cover bg-[#42b7ed] p-4 rounded-lg"
                 />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">Project Case Study {study}</h3>
-                  <p className="text-gray-600 mb-4">Innovative solution for complex foundation challenges.</p>
-                  <button className="text-blue-600 font-semibold hover:text-blue-800">
-                    Read More →
-                  </button>
-                </div>
               </div>
-            ))}
-          </div>
+              <div className="p-4 pb-8 flex flex-col justify-center items-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+                <a href={`#services-${service.id}`} className="mt-4 text-blue-100 font-semibold hover:text-blue-800 bg-white/20 rounded-full px-8 py-2 shadow-lg">
+                  EXPLORE
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
+      <Subservices services={dewatering} />
+      <Subservices services={shoring} />
+      <Subservices services={piling} />
+      <Subservices services={ndrc} />
+    </>
   );
 };
 

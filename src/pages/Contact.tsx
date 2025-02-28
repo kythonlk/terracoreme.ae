@@ -1,27 +1,9 @@
-import React from 'react';
 import { Phone, Mail, MapPin, Upload } from 'lucide-react';
 
-const ContactMarker = ({ text }: { text: string }) => (
-  <div className="flex items-center">
-    <MapPin className="w-8 h-8 text-blue-600" />
-    <span className="ml-2 text-sm font-semibold bg-white px-2 py-1 rounded shadow">
-      {text}
-    </span>
-  </div>
-);
-
 const Contact = () => {
-  const defaultProps = {
-    center: {
-      lat: 25.2048,
-      lng: 55.2708
-    },
-    zoom: 11
-  };
 
   return (
     <div className="pt-20">
-      {/* Hero Section */}
       <div className="relative h-96 bg-gray-900">
         <div className="absolute inset-0 bg-cover bg-center opacity-50"
           style={{
@@ -35,7 +17,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
       <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Users, Shield, Clock, Leaf } from 'lucide-react';
 
 const features = [
@@ -26,8 +25,8 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <div className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-32 bg-blue-100">
+      <div className="mx-auto px-4 sm:px-10 lg:px-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Us?</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
