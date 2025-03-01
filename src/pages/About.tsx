@@ -35,21 +35,21 @@ const groupOfCompanies = [
     name: 'Fixperts',
     description: 'Fixperts is a leading provider for building maintenance, repair and refurbishing services in the United Arab Emirates. Fixperts serves both residential as well...',
     image: a2,
-    size: 80,
+    size: 64,
     year: 2014
   },
   {
     name: 'Fixperts Shop',
     description: 'Fixperts Shop is the newest venture under Fixperts group that targets high-end, in-shop repair and instant services for electronics, watches, keys, shoes and miscellaneous items.',
     image: a3,
-    size: 80,
+    size: 64,
     year: 2021
   },
   {
     name: 'Fixperts Fresh Living',
     description: 'Fixperts Fresh Living provides a range of comprehensive professional cleaning services and disinfection treatment from commercial to residential clients.',
     image: a4,
-    size: 80,
+    size: 64,
     year: 2022
   }
 ];

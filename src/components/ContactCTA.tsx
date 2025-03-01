@@ -14,15 +14,15 @@ const ContactCTA = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="text-center">
             <Phone className="w-8 h-8 text-white mx-auto mb-4" />
-            <p className="text-white">+971 4 123 4567</p>
+            <p className="text-white">+971 4 512 0777</p>
           </div>
           <div className="text-center">
             <Mail className="w-8 h-8 text-white mx-auto mb-4" />
-            <p className="text-white">info@terracore.ae</p>
+            <p className="text-white">info@terracoreme.ae</p>
           </div>
           <div className="text-center">
             <MapPin className="w-8 h-8 text-white mx-auto mb-4" />
-            <p className="text-white">Dubai, United Arab Emirates</p>
+            <p className="text-white">Dubai Production City , Dubai, UAE</p>
           </div>
         </div>
 

@@ -105,7 +105,7 @@ const ndrc = {
 const Services = () => {
   return (
     <>
-      <div className="relative py-20" id="services">
+      <div className="relative" id="services">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay
@@ -116,9 +116,9 @@ const Services = () => {
         >
           <source src="/bg2.mp4" type="video/mp4" />
         </video>
-        <div className="px-4 sm:px-10 lg:px-20 pt-20 relative z-10 bg-gray-900/10">
+        <div className="px-4 sm:px-10 lg:px-20 h-[100vh] pt-60 relative z-10 bg-gray-900/10">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <h2 className="text-6xl font-bold text-gray-900 mb-4">Our Services</h2>
             <p className="text-lg text-gray-100 max-w-3xl mx-auto text-justify">
               We have perfected our specialization in the industry of shoring works, where our expertise consistently meets the highest expectations for quality foundation solutions. With a focus on precision and safety, our trusted services include:
             </p>
