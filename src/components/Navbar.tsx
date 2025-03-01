@@ -56,6 +56,7 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/70'} shadow-lg fixed w-full z-50`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,10 +83,10 @@ const Navbar = () => {
                   <li key={item.path} className="relative group">
                     <Link
                       to={item.path}
-                      className={`text-gray-700 hover:text-blue-600 ${isActive ? 'text-blue-600' : ''
+                      className={`text-gray-700 hover:text-blue-600 ${isActive ? 'text-blue-600' : 'text-blue-600'
                         }`}
                     >
-                      {item.label}
+                      {isActive ? <span className="text-blue-600">{item.label}</span> : item.label}
                     </Link>
                     {hasSubLinks && (
                       <div
@@ -93,22 +94,24 @@ const Navbar = () => {
                           hidden 
                           group-hover:flex
                           absolute
-                        rounded-md
+                          rounded-md
                           left-0 
-                          top-full 
-                          w-[calc(40vw)]
-                          bg-white/80
+                          top-5 
+                          w-[calc(80vw)]
+                          md:w-[calc(50vw)]
+                          lg:w-[calc(30vw)]
+                          bg-white
                           shadow-lg
                           justify-center
                           z-10
                         "
                       >
-                        <ul className="flex space-x-8 py-3">
+                        <ul className="flex py-2 space-x-4 justify-between">
                           {item.subLinks.map((sub) => (
                             <li key={sub.path}>
                               <Link
                                 to={sub.path}
-                                className="text-gray-700 hover:text-blue-600 px-4"
+                                className="text-gray-700 hover:text-blue-600 w-full"
                               >
                                 {sub.label}
                               </Link>

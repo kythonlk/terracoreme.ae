@@ -4,7 +4,7 @@ const Contact = () => {
 
   return (
     <div>
-      <div className="relative h-[50vh] bg-gray-900">
+      <div className="relative h-[60vh] bg-gray-900">
         <div className="absolute inset-0 bg-cover bg-center opacity-50"
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1486325212027-8081e485255e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
@@ -111,3 +111,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

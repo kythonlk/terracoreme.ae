@@ -26,7 +26,7 @@ export default function WorkWithUs() {
   ];
   return (
     <div className="bg-[#dbd9d6] min-h-screen">
-      <div className="relative h-[50vh] bg-gray-900">
+      <div className="relative h-[60vh] bg-gray-900">
         <div className="absolute inset-0 bg-cover bg-center opacity-40"
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=2069&auto=format&fit=crop")'
