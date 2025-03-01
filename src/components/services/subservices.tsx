@@ -9,7 +9,6 @@ type Services = {
 }
 
 export default function Services({ services }: { services: Services }) {
-
   return (
     <div className="relative py-10 scroll-m-16" id={`services-${services.id}`}>
       <div className="text-center py-10 bg-blue-200">
@@ -18,16 +17,16 @@ export default function Services({ services }: { services: Services }) {
           {services.subTitle}
         </p>
       </div>
-      <div className="flex flex-col items-start gap-6 py-4">
+      <div className="relative flex flex-col items-start px-10 md:px-40 py-10 bg-[#dbd9d6]">
+
         {services.subServices.map((service, index) => (
-          <div key={index} className="bg-blue-200/40 rounded-lg shadow-lg overflow-hidden">
-            <div className="p-4 pb-8 flex flex-col justify-center items-center">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-            </div>
+          <div key={index} className="relative flex items-center gap-4 px-16 py-10">
+            <div className="w-8 h-8 bg-blue-400 rounded-full"></div>
+            <h3 className="text-xl font-bold text-gray-900 relative z-10 w-60">{service.title}</h3>
           </div>
         ))}
+        <div className="absolute left-[30%] top-0 h-full w-1 bg-blue-700"></div>
       </div>
     </div>
   );
-};
-
+}

@@ -8,6 +8,9 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Landing from './components/Landing';
+import WorkWithUs from './pages/Work-With-Us';
+import Opportunities from './pages/Opp';
+import NotFound from './pages/404';
 
 function App() {
   return (
@@ -39,6 +42,9 @@ function AppContent() {
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/work-with-us" element={<WorkWithUs />} />
+          <Route path="/opportunities" element={<Opportunities />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

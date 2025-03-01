@@ -8,7 +8,7 @@ const services = [
   {
     id: 1,
     title: 'Dewatering Works',
-    image:  s1
+    image: s1
   },
   {
     id: 2,
@@ -28,22 +28,22 @@ const services = [
 ];
 
 const dewatering = {
-    id: 1,
-    title: 'Dewatering Works',
-    video: s1,
-    subTitle: 'Expertise in dewatering ensures that your project site remains safe, stable, and ready for construction, even in challenging groundwater conditions.',
-    subServices: [
-      {
-        title: 'Well Point',
-      },
-      {
-        title: 'Deep Well',
-      },
-      {
-        title: 'Sump Pump',
-      }
-    ]
-  }
+  id: 1,
+  title: 'Dewatering Works',
+  video: s1,
+  subTitle: 'Expertise in dewatering ensures that your project site remains safe, stable, and ready for construction, even in challenging groundwater conditions.',
+  subServices: [
+    {
+      title: 'Well Point',
+    },
+    {
+      title: 'Deep Well',
+    },
+    {
+      title: 'Sump Pump',
+    }
+  ]
+}
 const shoring = {
   id: 2,
   title: 'Shoring Works',
@@ -99,52 +99,52 @@ const ndrc = {
       title: 'Thrust Boring',
     },
 
-]
+  ]
 }
 
 const Services = () => {
   return (
     <>
-    <div className="relative py-20" id="services">
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{ zIndex: 1 }}
-      >
-        <source src="/bg2.mp4" type="video/mp4" />
-      </video>
-      <div className="px-4 sm:px-10 lg:px-20 pt-20 relative z-10 bg-gray-900/10">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
-          <p className="text-lg text-gray-100 max-w-3xl mx-auto text-justify">
-            We have perfected our specialization in the industry of shoring works, where our expertise consistently meets the highest expectations for quality foundation solutions. With a focus on precision and safety, our trusted services include:
-          </p>
-        </div>
+      <div className="relative py-20" id="services">
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{ zIndex: 1 }}
+        >
+          <source src="/bg2.mp4" type="video/mp4" />
+        </video>
+        <div className="px-4 sm:px-10 lg:px-20 pt-20 relative z-10 bg-gray-900/10">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <p className="text-lg text-gray-100 max-w-3xl mx-auto text-justify">
+              We have perfected our specialization in the industry of shoring works, where our expertise consistently meets the highest expectations for quality foundation solutions. With a focus on precision and safety, our trusted services include:
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white/40 rounded-lg shadow-lg overflow-hidden">
-              <div className="h-52 overflow-hidden flex items-end justify-center">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-40 h-40 object-cover bg-[#42b7ed] p-4 rounded-lg"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/40 rounded-lg shadow-lg overflow-hidden">
+                <div className="h-52 overflow-hidden flex items-end justify-center">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-40 h-40 object-cover bg-[#42b7ed] p-4 rounded-lg"
+                  />
+                </div>
+                <div className="p-4 pb-8 flex flex-col justify-center items-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+                  <a href={`#services-${service.id}`} className="mt-4 text-blue-100 font-semibold hover:text-blue-800 bg-white/20 rounded-full px-8 py-2 shadow-lg">
+                    EXPLORE
+                  </a>
+                </div>
               </div>
-              <div className="p-4 pb-8 flex flex-col justify-center items-center">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                <a href={`#services-${service.id}`} className="mt-4 text-blue-100 font-semibold hover:text-blue-800 bg-white/20 rounded-full px-8 py-2 shadow-lg">
-                  EXPLORE
-                </a>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
       <Subservices services={dewatering} />
       <Subservices services={shoring} />
       <Subservices services={piling} />

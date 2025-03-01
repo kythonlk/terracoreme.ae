@@ -15,7 +15,7 @@ const Navbar = () => {
     },
     {
       path: '/about',
-      label: 'About +',
+      label: 'About Us +',
       subLinks: [
         { path: '/mission-and-vision', label: 'Mission and Vision' },
         { path: '/hse-and-quality', label: 'HSE and Quality' },
