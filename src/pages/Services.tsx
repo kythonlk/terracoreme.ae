@@ -8,21 +8,25 @@ const services = [
   {
     id: 1,
     title: 'Dewatering Works',
+    link: '#services-1',
     image: s1
   },
   {
     id: 2,
     title: 'Shoring Works',
+    link: '#services-2',
     image: s2
   },
   {
     id: 3,
     title: 'Piling Works',
+    link: '#services-3',
     image: s3
   },
   {
     id: 4,
     title: 'NDRC Works',
+    link: '#services-4',
     image: s4
   }
 ];
@@ -117,27 +121,53 @@ const Services = () => {
           <source src="/bg2.mp4" type="video/mp4" />
         </video>
         <div className="px-4 sm:px-10 lg:px-20 h-[100vh] pt-60 relative z-10 bg-gray-900/10">
-          <div className="text-center mb-16">
-            <h2 className="text-6xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-lg text-gray-100 max-w-3xl mx-auto text-justify">
-              We have perfected our specialization in the industry of shoring works, where our expertise consistently meets the highest expectations for quality foundation solutions. With a focus on precision and safety, our trusted services include:
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900  mb-6">
+              Our Services
+            </h2>
+            <p className="text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
+              We have perfected our specialization in the industry of shoring works, where our expertise consistently meets the highest expectations for quality foundation solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/40 rounded-lg shadow-lg overflow-hidden">
-                <div className="h-52 overflow-hidden flex items-end justify-center">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-40 h-40 object-cover bg-[#42b7ed] p-4 rounded-lg"
-                  />
+              <div
+                key={index}
+                className="group relative bg-white/5 rounded-2xl backdrop-blur-lg border border-white/10 hover:border-white/20 transition-all duration-300 ease-out hover:-translate-y-2 shadow-xl hover:shadow-2xl"
+              >
+                <div className="p-8 pb-0 flex justify-center">
+                  <div className="relative w-40 h-40 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 p-4 transform group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
                 </div>
-                <div className="p-4 pb-8 flex flex-col justify-center items-center">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                  <a href={`#services-${service.id}`} className="mt-4 text-blue-100 font-semibold hover:text-blue-800 bg-white/20 rounded-full px-8 py-2 shadow-lg">
-                    EXPLORE
+
+                <div className="p-8 pt-6 text-center">
+                  <h3 className="text-2xl font-bold text-gray-100 mb-4">
+                    {service.title}
+                  </h3>
+                  <a
+                    href={service.link}
+                    className="inline-flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors duration-200"
+                  >
+                    <span>Explore Service</span>
+                    <svg
+                      className="w-4 h-4 -translate-x-1 group-hover:translate-x-0 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                   </a>
                 </div>
               </div>

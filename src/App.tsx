@@ -11,6 +11,7 @@ import Landing from './components/Landing';
 import WorkWithUs from './pages/Work-With-Us';
 import Opportunities from './pages/Opp';
 import NotFound from './pages/404';
+import ScrollToTop from './lib/Scrall';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function AppContent() {
   ) : (
     <div className="min-h-screen bg-white">
       <Navbar />
+      <ScrollToTop />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
