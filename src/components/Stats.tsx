@@ -1,4 +1,3 @@
-import React from 'react';
 import { Users, Building2, CheckCircle, Award } from 'lucide-react';
 
 const Stats = () => {

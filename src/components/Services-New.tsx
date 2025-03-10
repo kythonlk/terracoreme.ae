@@ -44,14 +44,12 @@ const Services = () => {
         >
           <source src="/bg2.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-gray-900/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 to-gray-900/30" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900  mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-100  mb-6">
             Our Services
           </h2>
           <p className="text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
@@ -59,14 +57,12 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
               className="group relative bg-white/5 rounded-2xl backdrop-blur-lg border border-white/10 hover:border-white/20 transition-all duration-300 ease-out hover:-translate-y-2 shadow-xl hover:shadow-2xl"
             >
-              {/* Image Container */}
               <div className="p-8 pb-0 flex justify-center">
                 <div className="relative w-40 h-40 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 p-4 transform group-hover:scale-110 transition-transform duration-300">
                   <img
@@ -77,7 +73,6 @@ const Services = () => {
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-8 pt-6 text-center">
                 <h3 className="text-2xl font-bold text-gray-100 mb-4">
                   {service.title}

@@ -15,3 +15,37 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'The Seasons';
+  src: url('/fonts/reg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fr {
+  font-family: 'The Seasons';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'The Seasons';
+  src: url('/fonts/italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+.fi {
+  font-family: 'The Seasons', sans-serif;
+  font-style: italic;
+}
+
+
+.bg-bp{
+  background-color :#005aa6;
+}
+
+.font-bp{
+  color: #005aa6;
+}
+
