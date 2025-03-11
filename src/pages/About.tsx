@@ -78,17 +78,17 @@ const About = () => {
             {groupOfCompanies.map((company) => (
               <div
                 key={company.name}
-                className="relative flex flex-col md:grid md:grid-cols-2 bg-[#44b6ef]/70 rounded-lg shadow-lg items-center divide-x-4 divide-blue-900/80 min-h-60"
+                className="relative flex flex-col md:grid md:grid-cols-2 mb-10 bg-[#44b6ef]/70 rounded-lg shadow-xl items-center min-h-60"
               >
                 <div className="relative flex-1 p-10 text-gray-900 justify-center items-center">
-                  <span className="absolute text-[220px] text-gray-100 mx-auto text-center font-bold left-30 opacity-20 z-10 top-1/2 transform -translate-y-1/2">
+                  <span className="absolute text-[220px] text-gray-100 mx-auto text-center font-bold left-40 opacity-20 z-10 top-1/2 transform -translate-y-1/2">
                     {company.year}
                   </span>
                   <p className="relative text-lg font-medium text-justify">
                     {company.description}
                   </p>
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center border-l-4 border-blue-900/80 ">
                   <img
                     src={company.image}
                     alt={company.name}
@@ -98,7 +98,6 @@ const About = () => {
               </div>
             ))}
           </div>
-
           <div>
             <h2 className="text-3xl font-bold text-center mb-12">Certifications & Standards</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

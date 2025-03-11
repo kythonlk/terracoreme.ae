@@ -7,7 +7,7 @@ export default function WorkWithUs() {
       <div className="relative h-[100vh] bg-gray-900">
         <div className="absolute inset-0 bg-cover bg-center "
           style={{
-            backgroundImage: 'url("/home-2.png")'
+            backgroundImage: 'url("/home-2.webp")'
           }}
         />
         <div className="relative h-full flex items-center justify-center text-center">

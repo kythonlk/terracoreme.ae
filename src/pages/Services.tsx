@@ -2,6 +2,10 @@ import s1 from '../assets/s1.png';
 import s2 from '../assets/s2.png';
 import s3 from '../assets/s3.png';
 import s4 from '../assets/s4.png';
+import dewateringImage from '../assets/images/dewatering.webp';
+import shoringImage from '../assets/images/shoring.webp';
+import ndrcImage from '../assets/images/ndrc.webp';
+import pilingImage from '../assets/images/piling.webp';
 import Subservices from '../components/services/subservices';
 
 const services = [
@@ -34,37 +38,44 @@ const services = [
 const dewatering = {
   id: 1,
   title: 'Dewatering Works',
-  video: s1,
+  video: dewateringImage,
   subTitle: 'Expertise in dewatering ensures that your project site remains safe, stable, and ready for construction, even in challenging groundwater conditions.',
   subServices: [
     {
       title: 'Well Point',
+      dec: 'Used for shallow excavations (up to 6m). It involves a series of small-diameter wells connected to a header pipe and pumps'
     },
     {
       title: 'Deep Well',
+      dec: 'Used in deep excavations with high ground water flow. Large diameter wells drilled into the ground, each equipped with a submersible pump'
     },
     {
       title: 'Sump Pump',
+      dec: 'Used for shallow excavations and low ground water flow. A sump pit is located at the lowest points of an excavation to collect water'
     }
   ]
 }
 const shoring = {
   id: 2,
   title: 'Shoring Works',
-  video: s2,
+  video: shoringImage,
   subTitle: 'Specialize in shoring works, providing safe, reliable, and innovative solutions to support excavation and foundation projects.',
   subServices: [
     {
       title: 'Trench Box',
+      dec: 'Prefabricated boxes Used in shallow trench excavation ranging from 3 to 4.5 meters in depth'
     },
     {
       title: 'Trench Sheeting with I Beam Support ',
+      dec: 'Used in deep trench excavation ranging from 3 to 12 meters in depth'
     },
     {
       title: 'Sheet Piling',
+      dec: 'Used in large excavations, loose soil conditions, and areas with ground water'
     },
     {
       title: 'I beam and precast concrete panels',
+      dec: 'Used in large excavations in moderate soil conditions'
     }
   ]
 }
@@ -72,14 +83,16 @@ const shoring = {
 const piling = {
   id: 3,
   title: 'Piling Works',
-  video: s3,
+  video: pilingImage,
   subTitle: 'Specializes in piling works, offering advanced and reliable foundation solutions that ensure the stability and strength of your project from the ground up.',
   subServices: [
     {
       title: 'Secant Piling ',
+      dec: 'provide lateral support and act as a barrier for excavation stability, preventing soil into the construction site.'
     },
     {
       title: 'Bearing Piles',
+      dec: 'used to transfer the load of the structure to deeper, more stable soil'
     },
   ]
 }
@@ -87,20 +100,24 @@ const piling = {
 const ndrc = {
   id: 4,
   title: 'NDRC Works',
-  video: s4,
+  video: ndrcImage,
   subTitle: 'Specialize in Non-Destructive Road Closing services, offering innovative solutions to safely close roads without causing significant disruption or damage.',
   subServices: [
     {
       title: 'Horizontal Directional Drilling (HDD)',
+      dec: 'used for installing underground small dia pipe/cable lines in a shallow arc along a bore path.'
     },
     {
       title: 'Microtunelling',
+      dec: 'small diameter tunnel boring ie: sewerage or storm water pipes.'
     },
     {
       title: 'Pipe Jacking',
+      dec: 'pushing or "jacking" large diameter pipes through the ground using hydraulic jacks.'
     },
     {
       title: 'Thrust Boring',
+      dec: 'hydraulic thrusting system used to push smaller dia casing / pipe through soil.'
     },
 
   ]
@@ -122,7 +139,7 @@ const Services = () => {
         </video>
         <div className="px-4 sm:px-10 lg:px-20 h-[100vh] pt-60 relative z-10 bg-gray-900/10">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900  mb-6">
+            <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 fr">
               Our Services
             </h2>
             <p className="text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
