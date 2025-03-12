@@ -10,8 +10,8 @@ const Hero = () => {
       </div>
 
       <div className="relative h-full flex items-center">
-        <div className="max-w-full w-full p-32 bg-gray-900/20 backdrop-blur-sm flex flex-col items-center justify-center">
-          <h1 className="text-4xl md:text-7xl mb-6 text-center fr">
+        <div className="max-w-full w-full p-20 bg-gray-900/20 backdrop-blur-sm flex flex-col items-center justify-center">
+          <h1 className="text-4xl md:text-5xl mx-96 max-w-full mb-6 text-center">
             Building Trust  <br />
             Strengthening Foundations
           </h1>

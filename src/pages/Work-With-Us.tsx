@@ -12,7 +12,7 @@ export default function WorkWithUs() {
         />
         <div className="relative h-full flex items-center justify-center text-center">
           <div className="max-w-full w-full p-32 bg-gray-900/20 backdrop-blur-sm">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 fr">Let us do the work for you</h1>
+            <h1 className="text-5xl font-bold text-white mb-8">Let us do the work for you</h1>
             <button className="bg-[#005aa6] text-white px-8 py-4 rounded-lg transition">
               Consult with us
             </button>
@@ -23,7 +23,7 @@ export default function WorkWithUs() {
         <div className="mx-20 px-4 sm:px-6 lg:px-8">
 
           <div className="p-8 mb-8 flex flex-col items-center justify-center font-bp">
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-4xl font-bold mb-6">
               Ready to start your Project?
             </h2>
             <h2 className="text-3xl font-bold fi">Get in touch with our experts</h2>

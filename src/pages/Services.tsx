@@ -137,9 +137,9 @@ const Services = () => {
         >
           <source src="/bg2.mp4" type="video/mp4" />
         </video>
-        <div className="px-4 sm:px-10 lg:px-20 h-[100vh] pt-60 relative z-10 bg-gray-900/10">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 fr">
+        <div className="px-4 sm:px-10 lg:px-20 h-[100vh] pt-40 relative z-10 bg-gray-900/10">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-white mb-6">
               Our Services
             </h2>
             <p className="text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">

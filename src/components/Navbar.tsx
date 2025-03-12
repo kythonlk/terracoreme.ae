@@ -35,10 +35,10 @@ const Navbar = () => {
       path: '/work-with-us',
       label: 'Work With Us',
     },
-    {
-      path: '/contact',
-      label: 'Contact',
-    }
+    // {
+    //   path: '/contact',
+    //   label: 'Contact',
+    // }
   ];
 
   useEffect(() => {
@@ -56,10 +56,10 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
+  // full width on nav bar desktop
   return (
     <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/70'} shadow-lg fixed w-full z-50`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-4 sm:mx-20 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24">
           <Link to="/" className="flex items-center">
             <img src={CropedLogo} className="h-20" alt="TerraCore Logo" />
@@ -125,8 +125,7 @@ const Navbar = () => {
               })}
             </ul>
           </div>
-
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center justify-between">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700"

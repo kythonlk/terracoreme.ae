@@ -44,12 +44,12 @@ const Services = () => {
         >
           <source src="/bg2.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 to-gray-900/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-gray-900/30" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-100  mb-6">
+          <h2 className="text-5xl font-bold text-gray-900  mb-6">
             Our Services
           </h2>
           <p className="text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
