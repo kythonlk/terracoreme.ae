@@ -96,17 +96,18 @@ const Navbar = () => {
                           absolute
                           rounded-md
                           left-0 
-                          top-5 
+                          top-6 
                           w-[calc(80vw)]
-                          md:w-[calc(50vw)]
-                          lg:w-[calc(30vw)]
-                          bg-white
+                          md:w-[calc(60vw)]
+                          lg:w-[calc(40vw)]
+                          bg-white/50
                           shadow-lg
-                          justify-center
+                          justify-start
+                          pl-2
                           z-10
                         "
                       >
-                        <ul className="flex py-2 space-x-4 justify-between">
+                        <ul className="flex py-3 space-x-4 justify-between">
                           {item.subLinks.map((sub) => (
                             <li key={sub.path}>
                               <Link

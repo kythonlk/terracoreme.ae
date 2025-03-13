@@ -45,7 +45,15 @@
   background-color :#005aa6;
 }
 
+.bg-bl{
+  background-color:#42b7ed;
+}
+
 .font-bp{
   color: #005aa6;
+}
+
+.font-bl{
+  color:#42b7ed00;
 }
 

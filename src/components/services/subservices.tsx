@@ -20,29 +20,15 @@ export default function Services({ services }: { services: Services }) {
         </p>
       </div>
 
-      <div className="flex flex-col px-10 md:px-40 py-10">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4 mx-auto p-4 sm:p-10">
         {services.subServices.map((service, index) => (
           <div
             key={index}
-            className="relative flex flex-col items-start bg-white px-6 py-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 mb-8 overflow-hidden group"
+            className="flex justify-center bg-bl p-6 max-w-80 w-80 h-full rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 mb-8"
           >
-            <div className="absolute left-0 top-0 w-2 h-full bg-gradient-to-b from-blue-500 to-blue-400"></div>
-            <div className="w-full flex flex-col md:flex-row gap-8">
-              <div className="flex items-start gap-6 md:w-[30%]">
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center shadow-md">
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mt-2">
-                  {service.title}
-                </h3>
-              </div>
-              <div className="md:w-[70%] flex flex-col justify-center">
-                <p className="text-gray-600 text-xl leading-relaxed pl-4 border-l-4 border-blue-300">
-                  {service.dec}
-                </p>
-              </div>
-            </div>
+            <h3 className="text-xl font-bold text-gray-100 text-center">
+              {service.title}
+            </h3>
           </div>
         ))}
       </div>
