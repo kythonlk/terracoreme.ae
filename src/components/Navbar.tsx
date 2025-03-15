@@ -56,14 +56,14 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  // full width on nav bar desktop
+
   return (
     <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/70'} shadow-lg fixed w-full z-50`}>
       <div className="mx-4 sm:mx-20 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24">
           <Link to="/" className="flex items-center">
             <img src={CropedLogo} className="h-20" alt="TerraCore Logo" />
-            <div className="hidden md:flex flex-col items-start pl-6">
+            <div className="flex flex-col items-start pl-6">
               <span className="text-2xl font-bold text-gray-900">
                 TerraCore
               </span>

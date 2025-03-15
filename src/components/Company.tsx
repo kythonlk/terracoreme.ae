@@ -5,7 +5,7 @@ export default function Company() {
     <div className="bg-white" id="company">
       <div className="py-8 sm:py-20">
         <h2 className="text-3xl sm:text-5xl font-bold font-bp mb-4 sm:mb-8 text-center">Our Company</h2>
-        <img src={CompanyImage} alt="bg" className="w-full h-96 object-cover" />
+        <img src={CompanyImage} alt="bg" className="w-full h-96 object-cover object-top" />
         <p className="text-justify text-gray-600 mx-auto p-4 max-w-2xl text-xl sm:text-2xl my-4">
           With 40 years of experience in the construction industry, TerraCore was founded on a legacy of reliability and quality. Known for our commitment to precision, safety, and excellence, we specialize in shoring and foundation solutions...
         </p>

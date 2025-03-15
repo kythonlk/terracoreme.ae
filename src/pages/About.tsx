@@ -57,20 +57,13 @@ const groupOfCompanies = [
 const About = () => {
   return (
     <div className="pt-40 bg-[#dbd9d6]">
-      <div className="flex justify-end max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-5xl md:text-5xl font-bold text-amber-950 pb-10">About Us</h1>
+      <div className="flex gap-4 p-4 bg-[#9f9f9f]/70 mb-40 sm:px-20 lg:px-40">
+        <h2 className="text-7xl w-3/12 font-bold text-white my-10">About Us</h2>
+        <img src={AboutImage} alt="AboutImage" className="w-9/12 h-[30em] object-cover object-top" />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 bg-[#44b6ef]/70 mb-40 sm:px-20 lg:px-40">
-        <div className="flex flex-col gap-4 p-4">
-          <h2 className="text-5xl font-bold text-amber-950 mb-6">“In Depth”</h2>
-          <p className="text-xl text-gray-900">
-            At Terracore Piling and Foundation, we have built a legacy of excellence over the past 40 years, laying the groundwork for some of the most successful construction projects in the industry. Founded by Green Oasis General Contracting Co. LLC, we began with a focus on shoring works and have since expanded our expertise to include a wide range of foundation services, including piling, dewatering, and non-destructive testing. Our team is dedicated to providing reliable, safe, and efficient solutions that meet the unique challenges of each project.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4  -mb-40">
-          <img src={AboutImage} alt="AboutImage" className="w-full" />
-        </div>
-      </div>
+      <p className="text-xl text-gray-900 mx-20 -mt-20">
+        At Terracore Piling and Foundation, we have built a legacy of excellence over the past 40 years, laying the groundwork for some of the most successful construction projects in the industry. Founded by Green Oasis General Contracting Co. LLC, we began with a focus on shoring works and have since expanded our expertise to include a wide range of foundation services, including piling, dewatering, and non-destructive testing. Our team is dedicated to providing reliable, safe, and efficient solutions that meet the unique challenges of each project.
+      </p>
       <div className="py-10">
         <div className="px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-bold text-amber-950 mb-10 text-center">Group of Companies</h2>
