@@ -137,24 +137,24 @@ const Services = () => {
         >
           <source src="/bg2.mp4" type="video/mp4" />
         </video>
-        <div className="px-4 sm:px-10 lg:px-20 h-[100vh] pt-40 relative z-10 bg-gray-900/10">
+        <div className="px-2 sm:px-10 lg:px-20 h-full sm:h-[100vh] pt-40 relative z-10 bg-gray-900/10">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
               Our Services
             </h2>
-            <p className="text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
               We have perfected our specialization in the industry of shoring works, where our expertise consistently meets the highest expectations for quality foundation solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-8 pb-4">
             {services.map((service, index) => (
               <div
                 key={index}
                 className="group relative bg-white/5 rounded-2xl backdrop-blur-lg border border-white/10 hover:border-white/20 transition-all duration-300 ease-out hover:-translate-y-2 shadow-xl hover:shadow-2xl"
               >
-                <div className="p-8 pb-0 flex justify-center">
-                  <div className="relative w-40 h-40 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 p-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="p-2 sm:p-8 pb-0 flex justify-center">
+                  <div className="relative w-40 h-40 rounded-xl bg-[#42b7ed] p-4 transform group-hover:scale-110 transition-transform duration-300">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -164,7 +164,7 @@ const Services = () => {
                 </div>
 
                 <div className="p-8 pt-6 text-center">
-                  <h3 className="text-2xl font-bold text-gray-100 mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-4">
                     {service.title}
                   </h3>
                   <a

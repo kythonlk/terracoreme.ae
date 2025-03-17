@@ -49,7 +49,7 @@ const Services = () => {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold text-gray-900  mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-white  mb-6">
             Our Services
           </h2>
           <p className="text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
@@ -57,14 +57,14 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
               className="group relative bg-white/5 rounded-2xl backdrop-blur-lg border border-white/10 hover:border-white/20 transition-all duration-300 ease-out hover:-translate-y-2 shadow-xl hover:shadow-2xl"
             >
-              <div className="p-8 pb-0 flex justify-center">
-                <div className="relative w-40 h-40 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 p-4 transform group-hover:scale-110 transition-transform duration-300">
+              <div className="p-2 sm:p-8 pb-0 flex justify-center">
+                <div className="relative w-40 h-40 rounded-xl bg-[#42b7ed] p-4 transform group-hover:scale-110 transition-transform duration-300">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -74,11 +74,11 @@ const Services = () => {
               </div>
 
               <div className="p-8 pt-6 text-center">
-                <h3 className="text-2xl font-bold text-gray-100 mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-4">
                   {service.title}
                 </h3>
-                <Link
-                  to={service.link}
+                <a
+                  href={service.link}
                   className="inline-flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors duration-200"
                 >
                   <span>Explore Service</span>
@@ -95,7 +95,7 @@ const Services = () => {
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}

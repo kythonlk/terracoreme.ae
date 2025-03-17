@@ -12,8 +12,8 @@ type Services = {
 export default function Services({ services }: { services: Services }) {
   return (
     <div className="scroll-m-16 bg-[#dbd9d6]" id={`services-${services.id}`}>
-      <div className="text-center py-10 bg-blue-200 px-20">
-        <h2 className="text-4xl font-bold text-gray-900 mb-6">{services.title}</h2>
+      <div className="text-center py-10 bg-blue-200 p-4 sm:px-20">
+        <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">{services.title}</h2>
         <img src={services.video} alt={services.title} className="w-full h-[50vh] object-cover rounded-2xl" />
         <p className="text-lg text-gray-900 max-w-2xl mx-auto mt-4 text-justify">
           {services.subTitle}

@@ -56,12 +56,12 @@ const groupOfCompanies = [
 
 const About = () => {
   return (
-    <div className="pt-40 bg-[#dbd9d6]">
-      <div className="flex gap-4 p-4 bg-[#9f9f9f]/70 mb-40 sm:px-20 lg:px-40">
-        <h2 className="text-7xl w-3/12 font-bold text-white my-10">About Us</h2>
+    <div className="pt-40 bg-[#d1d1d1]">
+      <div className="flex gap-4 bg-[#9f9f9f]/70 mb-10 sm:px-20 lg:px-20">
+        <h2 className="text-7xl w-3/12 font-bold text-white my-10 text-end">About Us</h2>
         <img src={AboutImage} alt="AboutImage" className="w-9/12 h-[30em] object-cover object-top" />
       </div>
-      <p className="text-xl text-gray-900 mx-20 -mt-20">
+      <p className="text-xl text-white mx-20 mb-10">
         At Terracore Piling and Foundation, we have built a legacy of excellence over the past 40 years, laying the groundwork for some of the most successful construction projects in the industry. Founded by Green Oasis General Contracting Co. LLC, we began with a focus on shoring works and have since expanded our expertise to include a wide range of foundation services, including piling, dewatering, and non-destructive testing. Our team is dedicated to providing reliable, safe, and efficient solutions that meet the unique challenges of each project.
       </p>
       <div className="py-10">
@@ -81,7 +81,6 @@ const About = () => {
                   <p className="relative text-lg font-medium text-justify">{company.description}</p>
                 </div>
 
-                {/* Image Section */}
                 <div className="flex justify-center items-center border-t-4 md:border-l-4 md:border-t-0 border-blue-900/80 w-full md:w-auto py-4 md:py-0">
                   <img
                     src={company.image}

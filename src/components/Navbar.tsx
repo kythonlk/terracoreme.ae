@@ -3,10 +3,11 @@ import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import CropedLogo from '../assets/logo-c.webp';
 
-const Navbar = () => {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
   const navItems = [
     {
@@ -15,7 +16,7 @@ const Navbar = () => {
     },
     {
       path: '/about',
-      label: 'About Us +',
+      label: 'About Us',
       subLinks: [
         { path: '/mission-and-vision', label: 'Mission and Vision' },
         { path: '/hse-and-quality', label: 'HSE and Quality' },
@@ -58,9 +59,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/70'} shadow-lg fixed w-full z-50`}>
+    <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/70'} shadow-lg fixed w-full z-50 ${isSubMenuOpen ? "pb-6" : ""
+      }`}>
       <div className="mx-4 sm:mx-20 px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-24">
+        <div className="flex justify-between h-24 items-center">
           <Link to="/" className="flex items-center">
             <img src={CropedLogo} className="h-20" alt="TerraCore Logo" />
             <div className="flex flex-col items-start pl-6">
@@ -72,53 +74,44 @@ const Navbar = () => {
               </span>
             </div>
           </Link>
-
           <div className="hidden md:flex items-center">
-            <ul className="flex items-center space-x-8">
+            <ul className="flex items-center space-x-12">
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 const hasSubLinks = item.subLinks && item.subLinks.length > 0;
 
                 return (
-                  <li key={item.path} className="relative group">
+                  <li
+                    key={item.path}
+                    className="relative group"
+                    onMouseEnter={() => hasSubLinks && setIsSubMenuOpen(true)}
+                    onMouseLeave={() => hasSubLinks && setIsSubMenuOpen(false)}
+                  >
                     <Link
                       to={item.path}
-                      className={`text-gray-700 hover:text-blue-600 ${isActive ? 'text-blue-600' : 'text-blue-600'
-                        }`}
+                      className={`${isActive ? "text-[#42b7ed]" : "text-gray-700"
+                        } hover:text-[#42b7ed] relative pb-1 transition-colors duration-200`}
                     >
-                      {isActive ? <span className="text-blue-600">{item.label}</span> : item.label}
+                      {item.label}
+                      {hasSubLinks && <span className="ml-1 text-sm">+</span>}
+                      <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#42b7ed] transition-all duration-300 group-hover:w-full"></span>
                     </Link>
+
                     {hasSubLinks && (
-                      <div
-                        className="
-                          hidden 
-                          group-hover:flex
-                          absolute
-                          rounded-md
-                          left-0 
-                          top-6 
-                          w-[calc(80vw)]
-                          md:w-[calc(60vw)]
-                          lg:w-[calc(40vw)]
-                          bg-white/50
-                          shadow-lg
-                          justify-start
-                          pl-2
-                          z-10
-                        "
-                      >
-                        <ul className="flex py-3 space-x-4 justify-between">
-                          {item.subLinks.map((sub) => (
-                            <li key={sub.path}>
+                      <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 right-0 top-full w-full z-10 transition-all duration-300">
+                        <div className="py-4">
+                          <div className="flex gap-6">
+                            {item.subLinks.map((sub) => (
                               <Link
+                                key={sub.path}
                                 to={sub.path}
-                                className="text-gray-700 hover:text-blue-600 w-full"
+                                className="text-gray-700 hover:text-[#42b7ed] py-2 transition-colors duration-200 whitespace-nowrap"
                               >
                                 {sub.label}
                               </Link>
-                            </li>
-                          ))}
-                        </ul>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     )}
                   </li>
@@ -136,22 +129,36 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       {isOpen && (
         <div className="md:hidden bg-white/95">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
+              const hasSubLinks = item.subLinks && item.subLinks.length > 0;
               return (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`block px-3 py-2 text-gray-900 hover:text-blue-600 ${isActive ? 'text-blue-600' : ''
-                    }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
+                <div key={item.path}>
+                  <Link
+                    to={item.path}
+                    className={`block px-3 py-2 text-gray-900 hover:text-blue-600 ${isActive ? 'text-blue-600' : ''}`}
+                    onClick={() => hasSubLinks ? null : setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                  {hasSubLinks && (
+                    <div className="pl-4">
+                      {item.subLinks.map((sub) => (
+                        <Link
+                          key={sub.path}
+                          to={sub.path}
+                          className="block px-3 py-2 text-gray-700 hover:text-blue-600"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               );
             })}
           </div>
@@ -159,6 +166,4 @@ const Navbar = () => {
       )}
     </nav>
   );
-};
-
-export default Navbar;
+}
