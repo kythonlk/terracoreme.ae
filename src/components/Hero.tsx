@@ -50,7 +50,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-full w-full p-20 bg-gray-900/40 flex flex-col items-center justify-center text-center rounded-lg"
+          className="max-w-full w-full p-20 bg-gray-900/30 flex flex-col items-center justify-center text-center rounded-lg"
         >
           <h1 className="text-4xl md:text-5xl mb-6 text-white whitespace-pre-line">
             {slides[currentSlide].title}

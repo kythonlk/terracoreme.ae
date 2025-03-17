@@ -11,25 +11,25 @@ export default function WorkWithUs() {
           }}
         />
         <div className="relative h-full flex items-center justify-center text-center">
-          <div className="max-w-full w-full p-32 bg-gray-900/20 backdrop-blur-sm">
-            <h1 className="text-5xl font-bold text-white mb-8">Let us do the work for you</h1>
+          <div className="max-w-full w-full p-10 md:p-32 bg-gray-900/30">
+            <h1 className="text-3xl sm:text-5xl font-bold text-white mb-8">Let us do the work for you</h1>
             <button className="bg-[#005aa6] text-white px-8 py-4 rounded-lg transition">
               Consult with us
             </button>
           </div>
         </div>
       </div>
-      <div className="py-20 bg-[#cfd0d0] text-gray-900">
-        <div className="mx-20 px-4 sm:px-6 lg:px-8">
+      <div className="py-10 sm:py-20 bg-[#cfd0d0] text-gray-900">
+        <div className="mx-4 sm:mx-20 px-2 sm:px-6 lg:px-8">
 
-          <div className="p-8 mb-8 flex flex-col items-center justify-center font-bp">
+          <div className="p-2 sm:p-8 mb-8 flex flex-col items-center justify-center font-bp">
             <h2 className="text-4xl font-bold mb-6">
               Ready to start your Project?
             </h2>
             <h2 className="text-3xl font-bold fi">Get in touch with our experts</h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="mx-12 flex flex-col items-center justify-end">
+            <div className="mx-2 md:mx-12 flex flex-col items-center justify-end">
               <form className="space-y-6 bg-white rounded-lg shadow-lg p-8 ">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>

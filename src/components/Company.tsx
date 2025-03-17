@@ -1,4 +1,5 @@
 import CompanyImage from '../assets/images/company.webp';
+import { Link } from "react-router-dom";
 
 export default function Company() {
   return (
@@ -10,12 +11,12 @@ export default function Company() {
           With 40 years of experience in the construction industry, TerraCore was founded on a legacy of reliability and quality. Known for our commitment to precision, safety, and excellence, we specialize in shoring and foundation solutions...
         </p>
         <div className="flex justify-center gap-4 md:gap-20">
-          <a href="/about" className="bg-bp text-white py-3 px-8 rounded-md hover:bg-blue-700 transition min-w-40 text-center">
+          <Link to="/about" className="bg-bp text-white py-3 px-8 rounded-md hover:bg-blue-700 transition min-w-40 text-center">
             About Us
-          </a>
-          <a href="/services" className="bg-bp text-white py-3 px-8 rounded-md hover:bg-blue-700 transition min-w-40 text-center">
+          </Link>
+          <Link to="/services" className="bg-bp text-white py-3 px-8 rounded-md hover:bg-blue-700 transition min-w-40 text-center">
             Our Services
-          </a>
+          </Link>
         </div>
       </div>
     </div>
