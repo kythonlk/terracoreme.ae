@@ -21,7 +21,6 @@ export default function WorkWithUs() {
       </div>
       <div className="py-10 sm:py-20 bg-[#cfd0d0] text-gray-900">
         <div className="mx-4 sm:mx-20 px-2 sm:px-6 lg:px-8">
-
           <div className="p-2 sm:p-8 mb-8 flex flex-col items-center justify-center font-bp">
             <h2 className="text-4xl font-bold mb-6">
               Ready to start your Project?

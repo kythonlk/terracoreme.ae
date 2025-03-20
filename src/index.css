@@ -41,19 +41,33 @@
 }
 
 
-.bg-bp{
-  background-color :#005aa6;
+.bg-bp {
+  background-color: #005aa6;
 }
 
-.bg-bl{
-  background-color:#42b7ed;
+.bg-bl {
+  background-color: #42b7ed;
 }
 
-.font-bp{
+.font-bp {
   color: #005aa6;
 }
 
-.font-bl{
-  color:#42b7ed00;
+.font-bl {
+  color: #42b7ed00;
 }
 
+.wave-shape {
+  position: relative;
+}
+
+.wave-shape::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: white;
+  border-radius: 50% 50% 0 0;
+}
