@@ -29,10 +29,10 @@ export default function About() {
   return (
     <div className="pt-20 sm:pt-40">
       <div className="flex flex-col sm:flex-row justify-center gap-4 bg-[#9f9f9f]/70 mb-10 px-4 sm:px-20 md:px-16 lg:px-10 xl:px-8 2xl:px-6">
-        <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-9xl 2xl:text-9xl font-bold text-white mt-10 sm:mt-16 md:mt-18 lg:mt-20 xl:mt-20 2xl:mt-20 text-center sm:text-end w-full text-nowrap sm:-mr-8 md:-mr-9 lg:-mr-20 xl:-mr-20 2xl:-mr-20 sm:ml-8 md:ml-9 lg:ml-20 xl:ml-20 2xl:ml-20 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-3/12 2xl:w-3/12">
+        <h2 className="text-3xl md:text-5xl lg:text-7xl 2xl:text-9xl font-bold text-white mt-10 sm:mt-16  2xl:mt-20 text-center w-full text-nowrap sm:-mr-8 md:-mr-9 lg:-mr-20 xl:-mr-20 2xl:-mr-20 sm:ml-8 md:ml-9 lg:ml-20 xl:ml-20 2xl:ml-20 sm:w-5/12 2xl:w-3/12">
           About Us
         </h2>
-        <img src={AboutImage} alt="AboutImage" className="w-full sm:w-7/12 md:w-8/12 lg:w-9/12 xl:w-9/12 2xl:w-9/12 h-auto sm:h-[28em] md:h-[34em] lg:h-[34em] xl:h-[34em] 2xl:h-[34em] object-cover object-top -mt-1 sm:-mt-12 md:-mt-14 lg:-mt-16 xl:-mt-16 2xl:-mt-16" />
+        <img src={AboutImage} alt="AboutImage" className="w-full sm:w-7/12 2xl:w-9/12 h-auto sm:h-[28em] 2xl:h-[34em] object-cover object-top -mt-1 sm:-mt-12 md:-mt-14 lg:-mt-16 xl:-mt-16 2xl:-mt-16" />
       </div>
       <p className="text-base sm:text-xl text-gray-900 mx-4 sm:mx-40 mb-4 sm:mb-10">
         At Terracore Piling and Foundation, we have built a legacy of excellence over the past 40 years, laying the groundwork for some of the most successful construction projects in the industry. Founded by Green Oasis General Contracting Co. LLC, we began with a focus on shoring works and have since expanded our expertise to include a wide range of foundation services, including piling, dewatering, and non-destructive testing. Our team is dedicated to providing reliable, safe, and efficient solutions that meet the unique challenges of each project.
@@ -67,15 +67,15 @@ export default function About() {
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-1">
           <img src={bgServices} alt="bg-services" className="w-full h-[150px] sm:h-[380px] object-cover object-bottom" />
         </div>
-        <div className="mx-4 sm:mx-40 relative z-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="mx-4 lg:mx-40 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-6">
             <h2 className="text-2xl sm:text-5xl font-bold text-white text-start leading-tight">
               Health, Safety & Environment
             </h2>
             <div className="flex justify-center sm:justify-between mt-10 sm:mt-16 space-x-4">
-              <img src={logo1} alt="logo1" className="w-24 sm:w-auto h-20 sm:h-40 object-contain" />
-              <img src={logo2} alt="logo2" className="w-24 sm:w-60 h-20 sm:h-40 object-contain" />
-              <img src={logo3} alt="logo3" className="w-24 sm:w-auto h-20 sm:h-36 object-contain" />
+              <img src={logo1} alt="logo1" className="w-24 sm:w-auto h-20 sm:h-28 xl:h-40 object-contain" />
+              <img src={logo2} alt="logo2" className="w-24 sm:w-24 xl:w-60 h-20 sm:h-24 xl:h-40 object-contain" />
+              <img src={logo3} alt="logo3" className="w-24 sm:w-auto h-20 sm:h-24 xl:h-36 object-contain" />
             </div>
           </div>
         </div>
