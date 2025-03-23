@@ -4,7 +4,7 @@ import s2 from "../assets/s2.png";
 import s3 from "../assets/s3.png";
 import s4 from "../assets/s4.png";
 import s5 from "../assets/s5.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -60,7 +60,7 @@ const Services = () => {
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-gray-900/30" />
       </div>
-      <div className="relative z-10 -mt-32">
+      <div className="relative z-10 -mt-10 3xl:-mt-32">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
@@ -83,7 +83,7 @@ const Services = () => {
                 className="group relative rounded-2xl transition-all duration-300 ease-out hover:-translate-y-2"
               >
                 <div className="p-2 sm:p-6 pb-0 flex justify-center">
-                  <div className="relative w-40 h-40 rounded-xl bg-[#42b7ed] p-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-xl bg-[#42b7ed] p-4 transform group-hover:scale-110 transition-transform duration-300">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -93,7 +93,7 @@ const Services = () => {
                 </div>
 
                 <div className="p-4 text-center">
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-4">
+                  <h3 className="text-lg sm:text-2xl font-bold text-gray-100 mb-4">
                     {service.title}
                   </h3>
                 </div>

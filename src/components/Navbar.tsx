@@ -140,7 +140,7 @@ export default function Navbar() {
                   <Link
                     to={item.path}
                     className={`block px-3 py-2 text-gray-900 hover:text-blue-600 ${isActive ? 'text-blue-600' : ''}`}
-                    onClick={() => hasSubLinks ? null : setIsOpen(false)}
+                    onClick={() => setIsOpen(false)} 
                   >
                     {item.label}
                   </Link>
