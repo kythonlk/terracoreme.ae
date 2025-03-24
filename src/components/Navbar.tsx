@@ -61,7 +61,7 @@ export default function Navbar() {
   return (
     <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/70'} shadow-lg fixed w-full z-50 ${isSubMenuOpen ? "pb-6" : ""
       }`}>
-      <div className="mx-4 sm:mx-20 px-4 sm:px-6 lg:px-8">
+      <div className="mx-4 md:mx-8 xl:mx-20 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24 items-center">
           <Link to="/" className="flex items-center">
             <img src={CropedLogo} className="h-20" alt="TerraCore Logo" />
@@ -140,7 +140,7 @@ export default function Navbar() {
                   <Link
                     to={item.path}
                     className={`block px-3 py-2 text-gray-900 hover:text-blue-600 ${isActive ? 'text-blue-600' : ''}`}
-                    onClick={() => setIsOpen(false)} 
+                    onClick={() => setIsOpen(false)}
                   >
                     {item.label}
                   </Link>

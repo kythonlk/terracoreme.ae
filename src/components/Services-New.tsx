@@ -4,7 +4,8 @@ import s2 from "../assets/s2.png";
 import s3 from "../assets/s3.png";
 import s4 from "../assets/s4.png";
 import s5 from "../assets/s5.png";
-// import { Link } from "react-router-dom";
+import s6 from "../assets/s6.png";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -15,7 +16,7 @@ const services = [
   },
   {
     id: 2,
-    title: 'Soil Improvement \nWorks',
+    title: 'Soil Improvement Works',
     link: '#services-2',
     image: s2
   },
@@ -36,6 +37,12 @@ const services = [
     title: 'NDRC Works',
     link: '#services-5',
     image: s5
+  },
+  {
+    id: 6,
+    title: 'Logistics Solutions',
+    link: '#services-6',
+    image: s6
   }
 ];
 
@@ -76,9 +83,10 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="px-2 sm:px-10 lg:px-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-8">
+          <div className="px-2 sm:px-10 lg:px-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
+                to={"services" + service.link}
                 key={index}
                 className="group relative rounded-2xl transition-all duration-300 ease-out hover:-translate-y-2"
               >
@@ -97,7 +105,7 @@ const Services = () => {
                     {service.title}
                   </h3>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </motion.div>
