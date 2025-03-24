@@ -11,6 +11,9 @@ import Landing from './components/Landing';
 import WorkWithUs from './pages/Work-With-Us';
 import Opportunities from './pages/Opp';
 import NotFound from './pages/404';
+import ISO from './components/about/iso';
+import Misson from './components/about/misson';
+import HSE from './components/about/hse';
 import { ScrollToTop, ScrollToHash } from "./lib/Scrall";
 
 function App() {
@@ -42,6 +45,9 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/about/mission-and-vision" element={<Misson />} />
+          <Route path="/about/hse-and-quality" element={<HSE />} />
+          <Route path="/about/certification" element={<ISO />} />
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />

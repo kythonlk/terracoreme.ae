@@ -28,9 +28,9 @@ export default function Navbar() {
       label: 'About Us',
       subLinkStyle: '-ml-20',
       subLinks: [
-        { path: '/about#mission-and-vision', label: 'Mission and Vision' },
-        { path: '/about#hse-and-quality', label: 'HSE and Quality' },
-        { path: '/about#certification', label: 'Certification' },
+        { path: '/about/mission-and-vision', label: 'Mission and Vision' },
+        { path: '/about/hse-and-quality', label: 'HSE and Quality' },
+        { path: '/about/certification', label: 'Certification' },
         { path: '/news', label: 'News' }
       ]
     },
