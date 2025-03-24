@@ -9,7 +9,7 @@ export default function About() {
         <img src={AboutImage} alt="AboutImage" className="w-full sm:w-7/12 2xl:w-9/12 h-auto sm:h-[28em] 2xl:h-[34em] object-cover object-top -mt-1 sm:-mt-12 md:-mt-14 lg:-mt-16 xl:-mt-16 2xl:-mt-16" />
       </div>
       <p className="text-base sm:text-xl text-gray-900 mx-4 sm:mx-40 mb-4 sm:mb-10">
-        At Terracore Piling and Foundation, we have built a legacy of excellence over the past 40 years, laying the groundwork for some of the most successful construction projects in the industry. Founded by Green Oasis General Contracting Co. LLC, we began with a focus on shoring works and have since expanded our expertise to include a wide range of foundation services, including piling, dewatering, and non-destructive testing. Our team is dedicated to providing reliable, safe, and efficient solutions that meet the unique challenges of each project.
+        TerraCore is a full-service engineering contractor based in the UAE, specializing in comprehensive ground engineering solutions such as piling, soil improvement, shoring, dewatering, and Non-Disruptive Methods (NDM) With a team of highly experienced professionals and state-of-the-art equipment, we provide innovative, tailored solutions that meet the speciﬁc requirements of each project while ensuring safety, quality, and eﬃciency. By leveraging advanced technologies and industry best practices, TerraCore adopts a client-centric approach to deliver cost-eﬀective and sustainable solutions.
       </p>
     </div>
   );
