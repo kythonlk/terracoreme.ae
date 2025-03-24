@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Building2, MapPin, Calendar, ArrowRight } from 'lucide-react';
 
 const projects = [
@@ -49,7 +49,6 @@ const Projects = () => {
 
   return (
     <div className="pt-20">
-      {/* Hero Section */}
       <div className="relative h-96 bg-gray-900">
         <div className="absolute inset-0 bg-cover bg-center opacity-50"
           style={{
@@ -72,11 +71,10 @@ const Projects = () => {
             {categories.map((category) => (
               <button
                 key={category}
-                className={`px-6 py-2 rounded-full ${
-                  selectedCategory === category
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-gray-100'
-                }`}
+                className={`px-6 py-2 rounded-full ${selectedCategory === category
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-white text-gray-600 hover:bg-gray-100'
+                  }`}
                 onClick={() => setSelectedCategory(category)}
               >
                 {category}
@@ -131,7 +129,7 @@ const Projects = () => {
                   ✕
                 </button>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <img
                   src={selectedProject.beforeImage}

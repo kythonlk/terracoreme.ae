@@ -38,7 +38,7 @@ export default function About() {
         At Terracore Piling and Foundation, we have built a legacy of excellence over the past 40 years, laying the groundwork for some of the most successful construction projects in the industry. Founded by Green Oasis General Contracting Co. LLC, we began with a focus on shoring works and have since expanded our expertise to include a wide range of foundation services, including piling, dewatering, and non-destructive testing. Our team is dedicated to providing reliable, safe, and efficient solutions that meet the unique challenges of each project.
       </p>
 
-      <div className="relative py-8 pb-16 sm:py-32">
+      <div className="relative py-8 pb-16 sm:py-32" id="mission-and-vision">
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-1">
           <img src={bgServices} alt="bg-services" className="w-full h-[150px] sm:h-[320px] object-cover object-bottom" />
         </div>
@@ -63,7 +63,7 @@ export default function About() {
         </ul>
       </div>
 
-      <div className="relative py-8 pb-8 sm:py-32">
+      <div className="relative py-8 pb-8 sm:py-32" id="hse-and-quality">
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-1">
           <img src={bgServices} alt="bg-services" className="w-full h-[150px] sm:h-[380px] object-cover object-bottom" />
         </div>
@@ -108,7 +108,7 @@ export default function About() {
         </ul>
       </div>
 
-      <div className="relative  py-8 pb-8 sm:py-32">
+      <div className="relative  py-8 pb-8 sm:py-32" id="certification">
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-1">
           <img src={bgServices} alt="bg-services" className="w-full h-[150px] sm:h-[300px] object-cover object-bottom" />
         </div>

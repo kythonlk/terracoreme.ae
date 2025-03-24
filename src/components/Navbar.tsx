@@ -8,8 +8,17 @@ export default function Navbar() {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  type NavItem = {
+    path: string;
+    label: string;
+    subLinkStyle?: string;
+    subLinks?: {
+      path: string;
+      label: string;
+    }[];
+  };
 
-  const navItems = [
+  const navItems: NavItem[] = [
     {
       path: '/',
       label: 'Home',
@@ -17,16 +26,26 @@ export default function Navbar() {
     {
       path: '/about',
       label: 'About Us',
+      subLinkStyle: '-ml-20',
       subLinks: [
-        { path: '/mission-and-vision', label: 'Mission and Vision' },
-        { path: '/hse-and-quality', label: 'HSE and Quality' },
-        { path: '/certification', label: 'Certification' },
+        { path: '/about#mission-and-vision', label: 'Mission and Vision' },
+        { path: '/about#hse-and-quality', label: 'HSE and Quality' },
+        { path: '/about#certification', label: 'Certification' },
         { path: '/news', label: 'News' }
       ]
     },
     {
       path: '/services',
       label: 'Services',
+      subLinkStyle: '-ml-40',
+      subLinks: [
+        { path: '/services#services-1', label: 'Piling' },
+        { path: '/services#services-2', label: 'Soil Improvement' },
+        { path: '/services#services-3', label: 'Shoring' },
+        { path: '/services#services-4', label: 'Dewatering' },
+        { path: '/services#services-5', label: 'NDRC/NDM' },
+        { path: '/services#services-6', label: 'Logistics' },
+      ]
     },
     {
       path: '/opportunities',
@@ -79,7 +98,6 @@ export default function Navbar() {
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 const hasSubLinks = item.subLinks && item.subLinks.length > 0;
-
                 return (
                   <li
                     key={item.path}
@@ -97,8 +115,8 @@ export default function Navbar() {
                       <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#42b7ed] transition-all duration-300 group-hover:w-full"></span>
                     </Link>
 
-                    {hasSubLinks && (
-                      <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 right-0 top-full w-full z-10 transition-all duration-300">
+                    {item.subLinks && item.subLinks.length > 0 && (
+                      <div className={`${item.subLinkStyle} invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 right-0 top-full w-full z-10 transition-all duration-300`}>
                         <div className="py-4">
                           <div className="flex gap-6">
                             {item.subLinks.map((sub) => (
@@ -134,7 +152,6 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
-              const hasSubLinks = item.subLinks && item.subLinks.length > 0;
               return (
                 <div key={item.path}>
                   <Link
@@ -144,7 +161,7 @@ export default function Navbar() {
                   >
                     {item.label}
                   </Link>
-                  {hasSubLinks && (
+                  {item.subLinks && item.subLinks.length > 0 && (
                     <div className="pl-4">
                       {item.subLinks.map((sub) => (
                         <Link

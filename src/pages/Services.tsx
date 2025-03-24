@@ -39,7 +39,6 @@ import l2 from '../assets/services/l2.webp';
 import l3 from '../assets/services/l3.webp';
 import l4 from '../assets/services/l4.webp';
 import l5 from '../assets/services/l5.webp';
-
 import { Link } from 'react-router-dom';
 
 const services = [

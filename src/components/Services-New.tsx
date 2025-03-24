@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { useEffect, useRef } from 'react';
 import s1 from "../assets/s1.png";
 import s2 from "../assets/s2.png";
 import s3 from "../assets/s3.png";
@@ -47,11 +47,49 @@ const services = [
 ];
 
 
+
 const Services = () => {
+  const sectionRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    const section: any = sectionRef.current;
+    if (section) {
+      section.style.opacity = '0';
+      setTimeout(() => {
+        section.style.opacity = '1';
+        section.style.transition = 'opacity 1.2s ease';
+      }, 100);
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (contentRef.current) {
+      observer.observe(contentRef.current);
+    }
+
+    return () => {
+      if (contentRef.current) {
+        observer.unobserve(contentRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 1.2 } }}
+    <section
+      ref={sectionRef}
       className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
       id="services"
     >
@@ -68,11 +106,10 @@ const Services = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-gray-900/30" />
       </div>
       <div className="relative z-10 -mt-10 3xl:-mt-32">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
-          viewport={{ once: true }}
-          className="text-center"
+        <div
+          ref={contentRef}
+          className="text-center opacity-0"
+          style={{ transition: 'opacity 0.8s ease, transform 0.8s ease' }}
         >
           <h2 className="px-2 sm:px-10 lg:px-20 pt-20 text-3xl sm:text-5xl font-bold font-bp py-10 bg-white text-center">
             Our Services
@@ -82,7 +119,6 @@ const Services = () => {
               We have perfected our specialization in the industry of shoring works, where our expertise consistently meets the highest expectations for quality foundation solutions.
             </p>
           </div>
-
           <div className="px-2 sm:px-10 lg:px-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-8">
             {services.map((service, index) => (
               <Link
@@ -99,7 +135,6 @@ const Services = () => {
                     />
                   </div>
                 </div>
-
                 <div className="p-4 text-center">
                   <h3 className="text-lg sm:text-2xl font-bold text-gray-100 mb-4">
                     {service.title}
@@ -108,9 +143,9 @@ const Services = () => {
               </Link>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
