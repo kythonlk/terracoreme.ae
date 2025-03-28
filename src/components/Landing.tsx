@@ -20,7 +20,7 @@ export default function Landing({ landing }: { landing: any }) {
             TerraCore
           </h1>
           <p className="text-center">
-            PILING & FOUNDATION SPECIALISTS
+            Ground Engineering Solutions
           </p>
           <button
             className="bg-white/30 backdrop-blur hover:bg-blue-100 text-blue-900 font-bold h-16 w-28 sm:h-20 sm:w-40 rounded-full text-base sm:text-xl mt-2"

@@ -11,7 +11,7 @@ export default function Hero() {
 			image: "/home-1.webp",
 			title: "Building Trust\nStrengthening Foundations",
 			button: "Know us more",
-			link: "/about",
+			link: "#company",
 		},
 		{
 			image: "/home-2.webp",
@@ -60,7 +60,7 @@ export default function Hero() {
 
 			<div className="relative h-full flex items-center justify-center">
 				<div
-					className={`max-w-full w-full p-20 bg-gray-900/30 flex flex-col items-center justify-center text-center rounded-lg transition-all duration-500 ${isTransitioning ? 'opacity-0 transform translate-y-8' : 'opacity-100 transform translate-y-0'
+					className={`max-w-full w-full p-20 bg-gray-900/30 flex flex-col items-center justify-center text-center transition-all duration-500 ${isTransitioning ? 'opacity-0 transform translate-y-8' : 'opacity-100 transform translate-y-0'
 						}`}
 				>
 					<h1 className="text-4xl md:text-5xl mb-6 text-white whitespace-pre-line">

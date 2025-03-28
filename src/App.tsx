@@ -15,8 +15,12 @@ import ISO from './components/about/iso';
 import Misson from './components/about/misson';
 import HSE from './components/about/hse';
 import { ScrollToTop, ScrollToHash } from "./lib/Scrall";
+import fb from './assets/fb.png';
+import ig from './assets/ig.png';
+import linkedin from './assets/in.png';
+import x from './assets/x.png';
 
-function App() {
+export default function App() {
   return (
     <Router>
       <AppContent />
@@ -41,6 +45,7 @@ function AppContent() {
       <Navbar />
       <ScrollToTop />
       <ScrollToHash />
+      <SocialSidebar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -61,4 +66,23 @@ function AppContent() {
   );
 }
 
-export default App;
+
+function SocialSidebar() {
+  return (
+    <div className="fixed left-0 top-2/5 z-50 flex flex-col space-y-2">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <img src={fb} alt="Facebook" className="w-10 h-10 opacity-75" />
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <img src={x} alt="Twitter" className="w-10 h-10 opacity-75" />
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <img src={ig} alt="Instagram" className="w-10 h-10 opacity-75" />
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <img src={linkedin} alt="LinkedIn" className="w-10 h-10 opacity-75" />
+      </a>
+    </div>
+  );
+}
+

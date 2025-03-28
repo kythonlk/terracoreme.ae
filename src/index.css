@@ -45,8 +45,9 @@
   background-color: #005aa6;
 }
 
+/*i need to make thisbackground 70% opacity*/
 .bg-bl {
-  background-color: #42b7ed;
+  background-color: rgba(66, 183, 237, 0.8);
 }
 
 .font-bp {

@@ -29,7 +29,7 @@ export default function Navbar() {
       subLinkStyle: '-ml-20',
       subLinks: [
         { path: '/about/mission-and-vision', label: 'Mission and Vision' },
-        { path: '/about/hse-and-quality', label: 'HSE and Quality' },
+        { path: '/about/hse-and-quality', label: 'HSE' },
         { path: '/about/certification', label: 'Certification' },
         { path: '/news', label: 'News' }
       ]
@@ -39,10 +39,10 @@ export default function Navbar() {
       label: 'Services',
       subLinkStyle: '-ml-40',
       subLinks: [
-        { path: '/services#services-1', label: 'Piling' },
         { path: '/services#services-2', label: 'Soil Improvement' },
         { path: '/services#services-3', label: 'Shoring' },
         { path: '/services#services-4', label: 'Dewatering' },
+        { path: '/services#services-1', label: 'Piling' },
         { path: '/services#services-5', label: 'NDRC/NDM' },
         { path: '/services#services-6', label: 'Logistics' },
       ]
@@ -55,10 +55,10 @@ export default function Navbar() {
       path: '/work-with-us',
       label: 'Work With Us',
     },
-    // {
-    //   path: '/contact',
-    //   label: 'Contact',
-    // }
+    {
+      path: '/contact',
+      label: 'Contact',
+    }
   ];
 
   useEffect(() => {
@@ -89,7 +89,7 @@ export default function Navbar() {
                 TerraCore
               </span>
               <span className="text-md text-gray-800">
-                Piling and Foundation
+                Ground Engineering Solutions
               </span>
             </div>
           </Link>

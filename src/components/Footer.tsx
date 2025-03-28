@@ -37,13 +37,13 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-bp text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">TerraCore</h3>
-            <p className="text-gray-400">
-              Leading piling and foundation specialists in the UAE with 40 years of excellence.
+            <p className="text-gray-300">
+              Full service engineering contractor specializing in comprehensive ground work solutions
             </p>
           </div>
           <div>
@@ -51,7 +51,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {Links.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.href} className="text-gray-400 hover:text-white">
+                  <Link to={link.href} className="text-gray-300 hover:text-white">
                     {link.name}
                   </Link>
                 </li>
@@ -63,7 +63,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {services.map((link) => (
                 <li key={link.title}>
-                  <Link to={"/services" + link.link} className="text-gray-400 hover:text-white">
+                  <Link to={"/services" + link.link} className="text-gray-300 hover:text-white">
                     {link.title}
                   </Link>
                 </li>
@@ -72,14 +72,14 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <ul className="space-y-2 text-gray-400">
+            <ul className="space-y-2 text-gray-300">
               <li>Dubai Production City , Dubai, UAE</li>
               <li>Phone: +971 4 512 0777</li>
               <li>Email: info@terracoreme.ae</li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-200">
           <p>&copy; {new Date().getFullYear()} TerraCore. All rights reserved.</p>
         </div>
       </div>

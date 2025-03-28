@@ -1,79 +1,106 @@
-import s1 from '../assets/s1.png';
-import s2 from '../assets/s2.png';
-import s3 from '../assets/s3.png';
-import s4 from '../assets/s4.png';
+import { useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
+import { services } from '../lib/services-const';
 
-const services = [
-  {
-    link: '/services/#services-1',
-    id: '#services-1',
-    title: 'Dewatering Works',
-    image: s1
-  },
-  {
-    link: '/services/#services-2',
-    id: '#services-2',
-    title: 'Shoring Works',
-    image: s2
-  },
-  {
-    link: '/services/#services-3',
-    id: '#services-3',
-    title: 'Piling Works',
-    image: s3
-  },
-  {
-    link: '/services/#services-4',
-    id: '#services-4',
-    title: 'NDRC Works',
-    image: s4
-  }
-];
 
 const Services = () => {
-  return (
-    <div className="relative mt-20 bg-gray-900/10" id="services">
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{ zIndex: 1 }}
-      >
-        <source src="/bg2.mp4" type="video/mp4" />
-      </video>
-      <div className="px-4 sm:px-10 lg:px-20 relative py-20 z-10 bg-gray-900/10">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-gray-100 mb-4">Our Services</h2>
-          <p className="text-2xl text-gray-100 max-w-3xl mx-auto text-justify">
-            We have perfected our specialization in the industry of shoring works, where our expertise consistently meets the highest expectations for quality foundation solutions. With a focus on precision and safety, our trusted services include:
-          </p>
-        </div>
+  const sectionRef = useRef(null);
+  const contentRef = useRef(null);
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white/40 rounded-lg shadow-lg overflow-hidden">
-              <div className="h-52 overflow-hidden flex items-end justify-center">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-40 h-40 object-cover bg-[#42b7ed] p-4 rounded-lg"
-                />
-              </div>
-              <div className="p-4 pb-8 flex flex-col justify-center items-center">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                <Link to={service.link}
-                  className="mt-4 text-blue-100 font-semibold hover:text-blue-800 bg-white/20 rounded-full px-8 py-2 shadow-lg">
-                  EXPLORE
-                </Link>
-              </div>
-            </div>
-          ))}
+  useEffect(() => {
+    const section: any = sectionRef.current;
+    if (section) {
+      section.style.opacity = '0';
+      setTimeout(() => {
+        section.style.opacity = '1';
+        section.style.transition = 'opacity 1.2s ease';
+      }, 100);
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (contentRef.current) {
+      observer.observe(contentRef.current);
+    }
+
+    return () => {
+      if (contentRef.current) {
+        observer.unobserve(contentRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
+      id="services"
+    >
+      <div className="absolute inset-0 z-0">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/bg2.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-gray-900/30" />
+      </div>
+      <div className="relative z-10 -mt-10 3xl:-mt-32">
+        <div
+          ref={contentRef}
+          className="text-center opacity-0"
+          style={{ transition: 'opacity 0.8s ease, transform 0.8s ease' }}
+        >
+          <h2 className="px-2 sm:px-10 lg:px-20 pt-20 text-3xl sm:text-5xl font-bold font-bp py-10 bg-white text-center">
+            Our Services
+          </h2>
+          <div className="text-center mb-16 mt-4 px-2 sm:px-10 lg:px-20">
+            <p className="text-xl sm:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
+              We have perfected our specialization in the industry of shoring works, where our expertise consistently meets the highest expectations for quality foundation solutions.
+            </p>
+          </div>
+          <div className="px-2 sm:px-10 lg:px-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-8">
+            {services.sort((a, b) => a.id - b.id).map((service) => (
+              <Link
+                to={"services" + service.link}
+                key={service.id}
+                className="group relative rounded-2xl transition-all duration-300 ease-out hover:-translate-y-2"
+              >
+                <div className="p-2 sm:p-6 pb-0 flex justify-center">
+                  <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-xl bg-[#42b7ed] p-4 transform group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="text-lg sm:text-2xl font-bold text-gray-100 mb-4">
+                    {service.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
