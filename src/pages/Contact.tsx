@@ -111,7 +111,7 @@ export default function WorkWithUs() {
               </div>
 
               <div className="bg-white rounded-lg shadow-lg overflow-hidden h-96">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5299.4491367232895!2d55.177313575188435!3d25.03748377660175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6dce28555555%3A0x381294290dd0ffc!2sGreen%20Oasis%20General%20Cont.%20Co.%20L.L.C!5e0!3m2!1sen!2sae!4v1740811853817!5m2!1sen!2sae" width="820" height="400" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.912230385254!2d55.1828602!3d25.0370525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6d90eaeda877%3A0x4c62a29f983f549b!2sTerraCore!5e0!3m2!1sen!2sae!4v1743578389213!5m2!1sen!2sae" width="820" height="400" loading="lazy"></iframe>
               </div>
             </div>
           </div>
