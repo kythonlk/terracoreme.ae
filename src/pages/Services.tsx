@@ -5,7 +5,7 @@ import { piling, services, soil, dewatering, shoring, ndrc, logistic } from '../
 const Services = () => {
   return (
     <>
-      <div className="relative" id="services">
+      <div className="relative -mb-16" id="services">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay
@@ -53,10 +53,10 @@ const Services = () => {
         </div>
       </div>
       <Subservices services={soil} />
-      <Subservices services={shoring} />
-      <Subservices services={dewatering} />
       <Subservices services={piling} />
+      <Subservices services={shoring} />
       <Subservices services={ndrc} />
+      <Subservices services={dewatering} />
       <section id={logistic.id} className="scroll-m-16 bg-[#fdfefe] border-b-1 border-gray-900/10 text-gray-600 shadow-lg">
         <div className="text-center py-10 p-4">
           <h2 className="text-2xl sm:text-5xl font-semibold mt-4">{logistic.title}</h2>

@@ -17,7 +17,7 @@ export default function Hero() {
 			image: "/home-2.webp",
 			title: "Let us do the work for you",
 			button: "Consult with us",
-			link: "/work-with-us",
+			link: "/contact",
 		},
 	];
 

@@ -2,27 +2,27 @@ import { Upload } from "lucide-react";
 
 export default function WorkWithUs() {
 
-  const jobs = [
-    {
-      title: 'Civil Engineer',
-      description: 'We are looking for an experienced civil engineer specializing in foundation works.',
-      apply: 'Apply Now'
-    },
-    {
-      title: 'Structural Engineer',
-      description: 'We are looking for an experienced structural engineer specializing in foundation works.',
-      apply: 'Apply Now'
-    },
-    {
-      title: 'Project Manager',
-      description: 'We are looking for an experienced project manager specializing in foundation works.',
-      apply: 'Apply Now'
-    },
-    {
-      title: 'Project Coordinator',
-      description: 'We are looking for an experienced project coordinator specializing in foundation works.',
-      apply: 'Apply Now'
-    }
+  const jobs: any = [
+    // {
+    //   title: 'Civil Engineer',
+    //   description: 'We are looking for an experienced civil engineer specializing in foundation works.',
+    //   apply: 'Apply Now'
+    // },
+    // {
+    //   title: 'Structural Engineer',
+    //   description: 'We are looking for an experienced structural engineer specializing in foundation works.',
+    //   apply: 'Apply Now'
+    // },
+    // {
+    //   title: 'Project Manager',
+    //   description: 'We are looking for an experienced project manager specializing in foundation works.',
+    //   apply: 'Apply Now'
+    // },
+    // {
+    //   title: 'Project Coordinator',
+    //   description: 'We are looking for an experienced project coordinator specializing in foundation works.',
+    //   apply: 'Apply Now'
+    // }
   ];
   return (
     <div className="bg-[#dbd9d6] min-h-screen">
@@ -45,7 +45,7 @@ export default function WorkWithUs() {
         <div className="mb-16">
           <h2 className="text-2xl font-semibold text-[#005aa6] mb-6">Current Openings</h2>
           <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-            {jobs.map((job) => (
+            {jobs.length > 0 ? (jobs.map((job: any) => (
               <div key={job.title} className="bg-white p-6 rounded-lg shadow-lg">
                 <h3 className="text-xl font-bold text-[#005aa6]">{job.title}</h3>
                 <p className="text-gray-700 mt-2">{job.description}</p>
@@ -53,7 +53,11 @@ export default function WorkWithUs() {
                   Apply Now
                 </button>
               </div>
-            ))}
+            ))) : (
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-bold text-[#005aa6]">No Openings Currently</h3>
+              </div>
+            )}
           </div>
         </div>
 

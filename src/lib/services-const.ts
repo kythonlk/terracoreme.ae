@@ -41,7 +41,7 @@ import l5 from '../assets/services/l5.webp';
 
 export const services = [
   {
-    id: 4,
+    id: 2,
     title: 'Piling Works',
     link: '#services-1',
     image: s1
@@ -53,19 +53,19 @@ export const services = [
     image: s2
   },
   {
-    id: 2,
+    id: 3,
     title: 'Shoring Works',
     link: '#services-3',
     image: s3
   },
   {
-    id: 3,
+    id: 5,
     title: 'Dewatering Works',
     link: '#services-4',
     image: s4
   },
   {
-    id: 5,
+    id: 4,
     title: 'NDRC Works',
     link: '#services-5',
     image: s5
@@ -80,7 +80,7 @@ export const services = [
 
 export const soil = {
   id: "services-2",
-  title: 'SOIL IMPROVEMENT',
+  title: 'Soil Improvement',
   video: soilImage,
   subTitle: 'We provide comprehensive soil improvement services designed to enhance the strength and stability of soil for construction projects. Our techniques ensure that the ground is properly prepared, promoting stability and durability for any type of structure. We focus on optimizing soil behavior, enhancing load-bearing capacity, and extending the lifespan of foundations across diverse construction environments.',
   subServices: [
@@ -106,7 +106,7 @@ export const soil = {
 export const dewatering = {
   id: "services-4",
   title: 'Dewatering Works',
-  style: 'grid grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-6 justify-center items-center',
+  style: 'grid grid-cols-2 sm:grid-col-2 lg:grid-cols-3 gap-4 xl:gap-6 justify-center items-center',
   video: dewateringImage,
   subTitle: 'We specialize in providing advanced dewatering solutions to control groundwater levels and maintain dry excavation sites. Our expertise ensures safe, efficient water management, enhancing construction progress and site stability.',
   subServices: [
@@ -224,7 +224,7 @@ export const ndrc = {
 
 export const logistic = {
   id: "services-6",
-  title: 'LOGISTICS SOLUTION',
+  title: 'Logistics Solution',
   subTitle: 'TerraCore Logistics is dedicated to delivering the latest equipment and cutting-edge construction technologies. We offer a diverse selection of high-quality, well-maintained rental equipment, along with skilled operators to ensure optimal efficiency and safety on every project.',
   subServicesTop: [
     {

@@ -40,10 +40,10 @@ export default function Navbar() {
       subLinkStyle: '-ml-40',
       subLinks: [
         { path: '/services#services-2', label: 'Soil Improvement' },
-        { path: '/services#services-3', label: 'Shoring' },
-        { path: '/services#services-4', label: 'Dewatering' },
         { path: '/services#services-1', label: 'Piling' },
+        { path: '/services#services-3', label: 'Shoring' },
         { path: '/services#services-5', label: 'NDRC/NDM' },
+        { path: '/services#services-4', label: 'Dewatering' },
         { path: '/services#services-6', label: 'Logistics' },
       ]
     },
@@ -81,11 +81,11 @@ export default function Navbar() {
     <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/70'} shadow-lg fixed w-full z-50 ${isSubMenuOpen ? "pb-6" : ""
       }`}>
       <div className="mx-4 md:mx-8 xl:mx-20 px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-24 items-center">
+        <div className="flex justify-between h-20 sm:h-24 items-center">
           <Link to="/" className="flex items-center">
-            <img src={CropedLogo} className="h-20" alt="TerraCore Logo" />
+            <img src={CropedLogo} className="h-16 sm:h-20" alt="TerraCore Logo" />
             <div className="flex flex-col items-start pl-6">
-              <span className="text-2xl font-bold text-gray-900">
+              <span className="text-3xl font-bold text-gray-900">
                 TerraCore
               </span>
               <span className="text-md text-gray-800">

@@ -66,7 +66,7 @@ const Services = () => {
           className="text-center opacity-0"
           style={{ transition: 'opacity 0.8s ease, transform 0.8s ease' }}
         >
-          <h2 className="px-2 sm:px-10 lg:px-20 pt-20 text-3xl sm:text-5xl font-bold font-bp py-10 bg-white text-center">
+          <h2 className="px-2 sm:px-10 lg:px-20 pt-20 text-3xl sm:text-5xl font-bold text-gray-600 py-10 bg-white text-center">
             Our Services
           </h2>
           <div className="text-center mb-16 mt-4 px-2 sm:px-10 lg:px-20">

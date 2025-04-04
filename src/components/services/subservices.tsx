@@ -14,7 +14,7 @@ export default function Services({ services }: { services: Services }) {
   return (
     <div className="scroll-m-16 bg-[#fdfefe] border-b-1 border-gray-900/10 text-gray-600 shadow-lg" id={services.id}>
       <div className="text-center py-10 p-4">
-        <h2 className="text-2xl sm:text-5xl font-semibold sm:mb-6 mt-4">{services.title}</h2>
+        <h2 className="text-2xl sm:text-5xl font-semibold sm:mb-6 py-10">{services.title}</h2>
         <img src={services.video} alt={services.title} className="w-full h-[60vh] object-cover rounded-2xl" />
         <p className="text-xl max-w-5xl mx-auto mt-6 text-justify">
           {services.subTitle}

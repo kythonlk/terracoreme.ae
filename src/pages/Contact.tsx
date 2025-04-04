@@ -4,21 +4,21 @@ export default function WorkWithUs() {
 
   return (
     <div className="bg-[#cfd0d0] min-h-screen">
-      <div className="relative h-[100vh] bg-gray-900">
-        <div className="absolute inset-0 bg-cover bg-center "
-          style={{
-            backgroundImage: 'url("/home-2.webp")'
-          }}
-        />
-        <div className="relative h-full flex items-center justify-center text-center">
-          <div className="max-w-full w-full p-10 md:p-32 bg-gray-900/30">
-            <h1 className="text-3xl sm:text-5xl font-bold text-white mb-8">Let us do the work for you</h1>
-            <a href="#contact-form" className="bg-[#005aa6] text-white px-8 py-4 rounded-lg transition">
-              Consult with us
-            </a>
-          </div>
-        </div>
-      </div>
+      {/* <div className="relative h-[100vh] bg-gray-900"> */}
+      {/*   <div className="absolute inset-0 bg-cover bg-center " */}
+      {/*     style={{ */}
+      {/*       backgroundImage: 'url("/home-2.webp")' */}
+      {/*     }} */}
+      {/*   /> */}
+      {/*   <div className="relative h-full flex items-center justify-center text-center"> */}
+      {/*     <div className="max-w-full w-full p-10 md:p-32 bg-gray-900/30"> */}
+      {/*       <h1 className="text-3xl sm:text-5xl font-bold text-white mb-8">Let us do the work for you</h1> */}
+      {/*       <a href="#contact-form" className="bg-[#005aa6] text-white px-8 py-4 rounded-lg transition"> */}
+      {/*         Consult with us */}
+      {/*       </a> */}
+      {/*     </div> */}
+      {/*   </div> */}
+      {/* </div> */}
       <div className="py-10 sm:py-20 bg-[#cfd0d0] text-gray-900" id="contact-form">
         <div className="mx-4 sm:mx-20 px-2 sm:px-6 lg:px-8">
           <div className="p-2 sm:p-8 mb-8 flex flex-col items-center justify-center font-bp">
