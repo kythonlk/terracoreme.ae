@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+  <url>
+    <loc>https://terracoreme.ae/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://terracoreme.ae/about</loc>
+  </url>
+  <url>
+    <loc>https://terracoreme.ae/about/mission-and-vision</loc>
+  </url>
+  <url>
+    <loc>https://terracoreme.ae/about/hse-and-quality</loc>
+  </url>
+  <url>
+    <loc>https://terracoreme.ae/about/certification</loc>
+  </url>
+  <url>
+    <loc>https://terracoreme.ae/services</loc>
+  </url>
+  <url>
+    <loc>https://terracoreme.ae/projects</loc>
+  </url>
+  <url>
+    <loc>https://terracoreme.ae/contact</loc>
+  </url>
+  <url>
+    <loc>https://terracoreme.ae/work-with-us</loc>
+  </url>
+  <url>
+    <loc>https://terracoreme.ae/opportunities</loc>
+  </url>
+</urlset>
