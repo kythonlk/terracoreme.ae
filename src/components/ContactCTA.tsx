@@ -9,35 +9,7 @@ const ContactCTA = () => {
         <div className="mx-4 sm:mx-10 2xl:mx-20 px-2 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             <div className="mx-2 md:mx-8 flex flex-col items-start justify-start">
-              <form className="space-y-4 bg-white rounded-lg shadow-lg p-4 lg:p-8 md:-mt-20 h-full w-full flex flex-col justify-between">
-                <div>
-                  <label className="block text-gray-700 mb-2">Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-3 lg:px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">Email</label>
-                  <input
-                    type="email"
-                    className="w-full px-3 lg:px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Your Email"
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">Message</label>
-                  <textarea
-                    className="w-full px-3 lg:px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    rows={8}
-                    placeholder="How can we help?"
-                  ></textarea>
-                </div>
-                <button className="w-full bg-blue-600 text-white py-2 lg:py-3 rounded-md hover:bg-blue-700 transition">
-                  Send Message
-                </button>
-              </form>
+              <iframe src="https://extraco-mailer.vercel.app/terracore/contact/home" width="100%" className='w-full h-[650px] md:-mt-20 rounded-lg shadow-lg' ></iframe>
             </div>
             <div>
 

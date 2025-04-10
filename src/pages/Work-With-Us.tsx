@@ -1,4 +1,3 @@
-import { Upload } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 export default function WorkWithUs() {
@@ -69,47 +68,7 @@ export default function WorkWithUs() {
 
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-[#005aa6] mb-6">Apply Now</h2>
-            <form className="space-y-4">
-              <label className="block text-gray-700 mb-2">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Full Name"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#44b6ec]"
-              />
-              <label className="block text-gray-700 mb-2">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Email Address"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#44b6ec]"
-              />
-              <label className="block text-gray-700 mb-2">Position</label>
-              <input
-                type="text"
-                id="position"
-                placeholder="Position"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#44b6ec]"
-              />
-              <label className="block text-gray-700 mb-2">Cover Letter</label>
-              <textarea
-                placeholder="Cover Letter"
-                id="coverLetter"
-                rows={4}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#44b6ec]"
-              ></textarea>
-              <label className="block text-gray-700 mb-2">Resume</label>
-              <div className="border-2 border-dashed border-gray-300 rounded-md p-6 text-center">
-                <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                <p className="text-gray-600">Drop files here or click to upload</p>
-              </div>
-              <button
-                type="submit"
-                className="bg-[#44b6ec] text-white px-6 py-2 rounded-lg hover:bg-[#005aa6] transition"
-              >
-                Submit Application
-              </button>
-            </form>
+            <iframe src="https://extraco-mailer.vercel.app/terracore/cv" width="100%" className='w-full h-[580px]' ></iframe>
           </div>
         </div>
       </div>

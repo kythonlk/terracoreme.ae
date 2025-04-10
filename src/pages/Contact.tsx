@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Upload } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 export default function WorkWithUs() {
@@ -19,54 +19,9 @@ export default function WorkWithUs() {
               <h2 className="text-3xl font-bold fi">Get in touch with our experts</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="mx-2 md:mx-12 flex flex-col items-center justify-end">
-                <form className="space-y-6 bg-white rounded-lg shadow-lg p-8 ">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-gray-700 mb-2">Name</label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="Your Name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-700 mb-2">Email</label>
-                      <input
-                        type="email"
-                        className="w-full px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="Your Email"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-gray-700 mb-2">Subject</label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Subject"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-gray-700 mb-2">Message</label>
-                    <textarea
-                      className="w-full px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      rows={4}
-                      placeholder="Your Message"
-                    ></textarea>
-                  </div>
-                  <div>
-                    <label className="block text-gray-700 mb-2">Attachments</label>
-                    <div className="border-2 border-dashed border-gray-300 rounded-md p-6 text-center">
-                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                      <p className="text-gray-600">Drop files here or click to upload</p>
-                      <p className="text-sm text-gray-500">Support for RFQs, tenders, and project documents</p>
-                    </div>
-                  </div>
-                  <button className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition">
-                    Send Message
-                  </button>
-                </form>
+
+              <div className="mx-2 sm:mx-6 2xl:mx-12 flex flex-col items-center justify-end">
+                <iframe src="https://extraco-mailer.vercel.app/terracore/contact" width="100%" className='w-full h-[750px] rounded-lg shadow-lg' ></iframe>
               </div>
               <div>
                 <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
