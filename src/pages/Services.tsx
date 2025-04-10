@@ -1,11 +1,15 @@
-import Subservices from '../components/services/subservices';
 import { Link } from 'react-router-dom';
-import { piling, services, soil, dewatering, shoring, ndrc, logistic } from '../lib/services-const';
+import { services } from '../lib/services-const';
+import { Helmet } from 'react-helmet-async';
 
 const Services = () => {
   return (
     <>
-      <div className="relative -mb-16" id="services">
+      <Helmet>
+        <title>Services | TerraCore Ground Engineering Solutions</title>
+        <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
+      </Helmet>
+      <div className="relative -mb-18" id="services">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay
@@ -52,37 +56,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <Subservices services={soil} />
-      <Subservices services={piling} />
-      <Subservices services={shoring} />
-      <Subservices services={ndrc} />
-      <Subservices services={dewatering} />
-      <section id={logistic.id} className="scroll-m-16 bg-[#fdfefe] border-b-1 border-gray-900/10 text-gray-600 shadow-lg">
-        <div className="text-center py-10 p-4">
-          <h2 className="text-2xl sm:text-5xl font-semibold mt-4">{logistic.title}</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 m-6 md:mx-20">
-          {logistic.subServicesTop.map((service, index) => (
-            <div key={index} className="w-full h-[50vh] relative">
-              <img
-                src={service.image}
-                className={service.size}
-              />
-            </div>
-          ))}
-        </div>
-        <p className="text-center text-gray-700 mx-4 lg:mx-20">{logistic.subTitle}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-4 lg:mx-20 p-4 sm:p-10">
-          {logistic.subServices.map((service, index) => (
-            <div key={index} className="w-full h-80">
-              <img
-                src={service.image}
-                className="object-cover w-full h-full md:px-10"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
     </>
   );
 };

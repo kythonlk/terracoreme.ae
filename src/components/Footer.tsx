@@ -3,30 +3,12 @@ import { Link } from "react-router-dom";
 export default function Footer() {
 
   const services = [
-    {
-      title: 'Piling Works',
-      link: '#services-1',
-    },
-    {
-      title: 'Soil Improvement Works',
-      link: '#services-2',
-    },
-    {
-      title: 'Shoring Works',
-      link: '#services-3',
-    },
-    {
-      title: 'Dewatering Works',
-      link: '#services-4',
-    },
-    {
-      title: 'NDRC Works',
-      link: '#services-5',
-    },
-    {
-      title: 'Logistics Solutions',
-      link: '#services-6',
-    }
+    { path: '/services/soil', label: 'Soil Improvement' },
+    { path: '/services/piling', label: 'Piling' },
+    { path: '/services/shoring', label: 'Shoring' },
+    { path: '/services/ndrc', label: 'NDRC/NDM' },
+    { path: '/services/dewatering', label: 'Dewatering' },
+    { path: '/services/logistics', label: 'Logistics' },
   ];
   const Links = [
     { name: 'Home', href: '/' },
@@ -62,9 +44,9 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               {services.map((link) => (
-                <li key={link.title}>
-                  <Link to={"/services" + link.link} className="text-gray-300 hover:text-white">
-                    {link.title}
+                <li key={link.label}>
+                  <Link to={link.path} className="text-gray-300 hover:text-white">
+                    {link.label}
                   </Link>
                 </li>
               ))}

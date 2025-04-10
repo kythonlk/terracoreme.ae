@@ -43,37 +43,37 @@ export const services = [
   {
     id: 2,
     title: 'Piling Works',
-    link: '#services-1',
+    link: '/services/piling',
     image: s1
   },
   {
     id: 1,
     title: 'Soil Improvement Works',
-    link: '#services-2',
+    link: '/services/soil',
     image: s2
   },
   {
     id: 3,
     title: 'Shoring Works',
-    link: '#services-3',
+    link: '/services/shoring',
     image: s3
   },
   {
     id: 5,
     title: 'Dewatering Works',
-    link: '#services-4',
+    link: '/services/dewatering',
     image: s4
   },
   {
     id: 4,
     title: 'NDRC Works',
-    link: '#services-5',
+    link: '/services/ndrc',
     image: s5
   },
   {
     id: 6,
     title: 'Logistics Solutions',
-    link: '#services-6',
+    link: '/services/logistics',
     image: s6
   }
 ];

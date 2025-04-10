@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
-import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Landing from './components/Landing';
@@ -19,12 +18,18 @@ import fb from './assets/fb.png';
 import ig from './assets/ig.png';
 import linkedin from './assets/in.png';
 import x from './assets/x.png';
+import { HelmetProvider } from 'react-helmet-async';
+import Subservices from './components/services/subservices';
+import { piling, soil, dewatering, shoring, ndrc } from './lib/services-const';
+import Logistics from './components/services/logistics';
 
 export default function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </HelmetProvider>
   );
 }
 
@@ -54,7 +59,12 @@ function AppContent() {
           <Route path="/about/hse-and-quality" element={<HSE />} />
           <Route path="/about/certification" element={<ISO />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/services/soil" element={<Subservices services={soil} />} />
+          <Route path="/services/piling" element={<Subservices services={piling} />} />
+          <Route path="/services/shoring" element={<Subservices services={shoring} />} />
+          <Route path="/services/ndrc" element={<Subservices services={ndrc} />} />
+          <Route path="/services/dewatering" element={<Subservices services={dewatering} />} />
+          <Route path="/services/logistics" element={<Logistics />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/work-with-us" element={<WorkWithUs />} />
           <Route path="/opportunities" element={<Opportunities />} />

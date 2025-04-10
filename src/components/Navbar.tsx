@@ -39,12 +39,12 @@ export default function Navbar() {
       label: 'Services',
       subLinkStyle: '-ml-40',
       subLinks: [
-        { path: '/services#services-2', label: 'Soil Improvement' },
-        { path: '/services#services-1', label: 'Piling' },
-        { path: '/services#services-3', label: 'Shoring' },
-        { path: '/services#services-5', label: 'NDRC/NDM' },
-        { path: '/services#services-4', label: 'Dewatering' },
-        { path: '/services#services-6', label: 'Logistics' },
+        { path: '/services/soil', label: 'Soil Improvement' },
+        { path: '/services/piling', label: 'Piling' },
+        { path: '/services/shoring', label: 'Shoring' },
+        { path: '/services/ndrc', label: 'NDRC/NDM' },
+        { path: '/services/dewatering', label: 'Dewatering' },
+        { path: '/services/logistics', label: 'Logistics' },
       ]
     },
     {
