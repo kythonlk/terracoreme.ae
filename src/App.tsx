@@ -76,7 +76,7 @@ function SocialSidebar() {
       <a href="https://x.com/TerraCoreme" target="_blank" rel="noopener noreferrer">
         <img src={x} alt="Twitter" className="w-10 h-10 opacity-75" />
       </a>
-      <a href="https://www.instagram.com/terracore.ae/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/terracoreme.ae/" target="_blank" rel="noopener noreferrer">
         <img src={ig} alt="Instagram" className="w-10 h-10 opacity-75" />
       </a>
       <a href="https://linkedin.com/company/terracore-ae" target="_blank" rel="noopener noreferrer">

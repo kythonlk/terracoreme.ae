@@ -26,7 +26,7 @@ export default function Services({ services }: { services: Services }) {
             key={index}
             className="flex flex-col items-center justify-center"
           >
-            <img src={service.image} alt={service.title} className="w-52 h-52 2xl:w-72 2xl:h-72 object-cover rounded-full" />
+            <img src={service.image} alt={service.title} className="w-52 h-52 2xl:w-72 2xl:h-72 object-cover object-center rounded-full" />
             <h3 className="text-base md:text-xl text-gray-600 text-center my-8">
               {service.title}
             </h3>
