@@ -77,7 +77,7 @@ const Services = () => {
           <div className="px-2 sm:px-10 lg:px-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-8">
             {services.sort((a, b) => a.id - b.id).map((service) => (
               <Link
-                to={"services" + service.link}
+                to={service.link}
                 key={service.id}
                 className="group relative rounded-2xl transition-all duration-300 ease-out hover:-translate-y-2"
               >
