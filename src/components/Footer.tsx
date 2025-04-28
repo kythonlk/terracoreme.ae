@@ -56,8 +56,8 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-2 text-gray-300">
               <li>Dubai Production City , Dubai, UAE</li>
-              <li>Phone: +971 4 512 0777</li>
-              <li>Email: info@terracoreme.ae</li>
+              <li>Phone: <a href='tel:+97145120777' target='_blank'>+971 4 512 0777</a></li>
+              <li>Email: <a href="mailto:info@terracoreme.ae" target='_blank'>info@terracoreme.ae</a></li>
             </ul>
           </div>
         </div>

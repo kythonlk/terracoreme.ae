@@ -32,7 +32,7 @@ export default function WorkWithUs() {
                       </div>
                       <div>
                         <p className="font-semibold">Phone</p>
-                        <p className="font-bp">+971 4 512 0777</p>
+                        <a className="font-bp" href='tel:+97145120777' target='_blank'>+971 4 512 0777</a>
                       </div>
                     </div>
                     <div className="flex items-center">
@@ -41,7 +41,7 @@ export default function WorkWithUs() {
                       </div>
                       <div>
                         <p className="font-semibold">Email</p>
-                        <p className="font-bp">info@terracoreme.ae</p>
+                        <a className="font-bp" href="mailto:info@terracoreme.ae" target='_blank'>info@terracoreme.ae</a>
                       </div>
                     </div>
                     <div className="flex items-center">
@@ -50,7 +50,7 @@ export default function WorkWithUs() {
                       </div>
                       <div>
                         <p className="font-semibold">Address</p>
-                        <p className="font-bp">IMPZ, Production City, Galadari Bldg. B-16, 2nd Floor</p>
+                        <a className="font-bp" href='https://maps.app.goo.gl/bC9EfmntjH82Eu4w6' target='_blank' >IMPZ, Production City, Galadari Bldg. B-16, 2nd Floor</a>
                       </div>
                     </div>
                   </div>
