@@ -20,8 +20,9 @@ import linkedin from './assets/in.png';
 import x from './assets/x.png';
 import { HelmetProvider } from 'react-helmet-async';
 import Subservices from './components/services/subservices';
-import { piling, soil, dewatering, shoring, ndrc } from './lib/services-const';
+import { piling, dewatering, shoring, ndrc } from './lib/services-const';
 import Logistics from './components/services/logistics';
+import UnderMaintenance from './pages/UnderMaintenance';
 
 export default function App() {
   return (
@@ -59,7 +60,7 @@ function AppContent() {
           <Route path="/about/hse-and-quality" element={<HSE />} />
           <Route path="/about/certification" element={<ISO />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/services/soil" element={<Subservices services={soil} />} />
+          <Route path="/services/soil" element={<UnderMaintenance />} />
           <Route path="/services/piling" element={<Subservices services={piling} />} />
           <Route path="/services/shoring" element={<Subservices services={shoring} />} />
           <Route path="/services/ndrc" element={<Subservices services={ndrc} />} />
@@ -95,4 +96,3 @@ function SocialSidebar() {
     </div>
   );
 }
-
