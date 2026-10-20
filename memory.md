@@ -15,13 +15,13 @@
 - PDF-aligned site with restored video entry screen, optimized photos, LinkedIn update and full-width viewport sizing is deployed at https://terracoreme.ae on 69.62.78.119.
 - Build, lint, TypeScript and diff checks pass. Prior local responsive checks: 75; post-deployment live desktop/mobile browser checks: 12, no overflow, broken images or runtime errors.
 - Deployment staging: /home/terracoreme/deployments/20261020-pdf-fluid. Backup: /home/terracoreme/backups/terracoreme-20261020-before-pdf-fluid.tar.gz. Prior assets and .well-known preserved; all staged file hashes match live.
-- Git update: authorized website commit prepared for main/origin. Pre-existing permission-only changes remain local and are excluded from staging. Original new_photos/ and Demo_New Website.pdf are kept locally and ignored; optimized assets are tracked.
+- Git update: website commit 2a99774 pushed successfully to origin/main. Pre-existing permission-only changes remain local and are excluded from staging. Original new_photos/ and Demo_New Website.pdf are kept locally and ignored; optimized assets are tracked.
 
 ## Work log
 ### 2026-10-20 — codex — Deploy and update Git
 - What: Rebuilt/validated final site; backed up live webroot, uploaded build/archive to staging, published assets then atomically replaced index.html. Preserved existing assets and .well-known. Prepared source, optimized photos/reference assets and project memory for Git main; excluded permission-only changes and raw design uploads.
 - Files: .gitignore, application source, public/photos, public/reference, memory.md; server webroot /home/terracoreme/htdocs/terracoreme.ae. Backup and staging paths in Current state.
-- Verified: lint, TypeScript, production build and diff checks passed. All staged SHA-256 hashes match deployed files; homepage/About/services/soil/dewatering/contact HTTPS 200. Public browser: six routes at 1440/390px (12 checks), restored entry screen and LinkedIn confirmed, no overflow/broken photos/runtime errors. Git push result recorded after completion.
+- Verified: lint, TypeScript, production build and diff checks passed. All staged SHA-256 hashes match deployed files; homepage/About/services/soil/dewatering/contact HTTPS 200. Public browser: six routes at 1440/390px (12 checks), restored entry screen and LinkedIn confirmed, no overflow/broken photos/runtime errors. Website commit 2a99774 pushed to origin/main successfully.
 
 ### 2026-10-20 — codex — Full-width and viewport-based sizing
 - What: Removed fixed width limits from shared containers, navigation, galleries, service grids, intro sections and footer. Added fluid gutters, typography, section spacing, icons, images and controls using clamp/rem/vw; hero and video entry heights use svh, photo tiles use aspect-ratio. Kept PDF layouts and responsive column changes. External enquiry iframe keeps a content-safe minimum height.
