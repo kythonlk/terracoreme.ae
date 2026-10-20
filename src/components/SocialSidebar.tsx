@@ -1,0 +1,3 @@
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
+export function SocialLinks(){return <><a href="https://facebook.com/people/TerraCore/61573495764602" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={18}/></a><a href="https://www.instagram.com/terracoreme.ae/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={18}/></a><a href="https://www.linkedin.com/company/terracoreme-ae/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={18}/></a><a href="https://x.com/TerraCoreme" target="_blank" rel="noopener noreferrer" aria-label="X">𝕏</a></>}
+export default function SocialSidebar(){return <aside className="social-sidebar" aria-label="Social media"><SocialLinks/></aside>}

@@ -1,0 +1,10 @@
+import { useEffect, useRef, useState } from 'react';
+import { X } from 'lucide-react';
+type Photo={src:string;label:string};
+const divisions=[{title:'Piling and Shoring Division',photos:[{src:'/reference/gallery-piling-1.webp',label:'Piling equipment on site'},{src:'/reference/gallery-piling-2.webp',label:'Foundation reinforcement'},{src:'/reference/gallery-piling-3.webp',label:'Piling division'},{src:'/reference/gallery-piling-4.webp',label:'Piling and shoring operations'},{src:'/reference/gallery-piling-5.webp',label:'Ground engineering equipment'},{src:'/reference/gallery-piling-6.webp',label:'Our team at work'}]},{title:'Dewatering Division',photos:[{src:'/reference/gallery-dewatering-1.webp',label:'Dewatering installation'},{src:'/reference/gallery-dewatering-2.webp',label:'Dewatering team'},{src:'/photos/dewatering-cover.webp',label:'Dewatering operations'},{src:'/reference/gallery-dewatering-3.webp',label:'Dewatering systems'},{src:'/reference/gallery-dewatering-4.webp',label:'Pumping solutions'},{src:'/reference/gallery-dewatering-5.webp',label:'Dewatering in the field'}]}];
+export default function Gallery(){
+ const [selected,setSelected]=useState<Photo|null>(null);
+ const dialog=useRef<HTMLDialogElement>(null);
+ useEffect(()=>{if(selected)dialog.current?.showModal();else dialog.current?.close();},[selected]);
+ return <section className="gallery-section"><h2>OUR GALLERY</h2>{divisions.map(group=><div className="gallery-division" key={group.title}><h3>{group.title}</h3><div className="gallery-grid">{group.photos.map(photo=><button className="gallery-photo" key={photo.src} onClick={()=>setSelected(photo)} aria-label={'Enlarge '+photo.label}><img src={photo.src} alt={photo.label} loading="lazy"/></button>)}</div></div>)}<dialog ref={dialog} className="photo-dialog" onCancel={()=>setSelected(null)} onClick={e=>{if(e.target===e.currentTarget)setSelected(null);}}><button className="dialog-close" aria-label="Close photo" onClick={()=>setSelected(null)}><X/></button>{selected&&<><img src={selected.src} alt={selected.label}/><p>{selected.label}</p></>}</dialog></section>
+}

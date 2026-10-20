@@ -1,79 +1,18 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import { ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react';
+const slides = [
+  { image: '/photos/home-1.webp', title: 'BUILDING TRUST', subtitle: 'STRENGTHENING FOUNDATIONS' },
+  { image: '/photos/home-2.webp', title: 'LET US DO THE WORK', subtitle: 'GROUND ENGINEERING SOLUTIONS' },
+  { image: '/photos/home-3.webp', title: 'STRONG FOUNDATIONS', subtitle: 'BUILT WITH PRECISION AND CARE' }
+];
 export default function Hero() {
-	const [currentSlide, setCurrentSlide] = useState(0);
-	const [previousSlide, setPreviousSlide] = useState<number | null>(null);
-	const [isTransitioning, setIsTransitioning] = useState(false);
-
-	const slides = [
-		{
-			image: "/home-1.webp",
-			title: "Building Trust\nStrengthening Foundations",
-			button: "Know us more",
-			link: "#company",
-		},
-		{
-			image: "/home-2.webp",
-			title: "Let us do the work for you",
-			button: "Consult with us",
-			link: "/contact",
-		},
-	];
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setPreviousSlide(currentSlide);
-			setIsTransitioning(true);
-
-			setTimeout(() => {
-				setCurrentSlide((prev) => (prev + 1) % slides.length);
-
-				setTimeout(() => {
-					setIsTransitioning(false);
-				}, 100);
-			}, 500);
-		}, 5000);
-
-		return () => clearInterval(interval);
-	}, [currentSlide]);
-
-	return (
-		<div className="relative h-screen overflow-hidden">
-			<div
-				className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-500 ease-in-out ${isTransitioning ? 'opacity-0' : 'opacity-100'
-					}`}
-				style={{
-					backgroundImage: `url(${slides[currentSlide].image})`
-				}}
-			/>
-
-			{previousSlide !== null && (
-				<div
-					className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-500 ease-in-out ${isTransitioning ? 'opacity-100' : 'opacity-0'
-						}`}
-					style={{
-						backgroundImage: `url(${slides[previousSlide].image})`
-					}}
-				/>
-			)}
-
-			<div className="relative h-full flex items-center justify-center">
-				<div
-					className={`max-w-full w-full p-20 bg-gray-900/30 flex flex-col items-center justify-center text-center transition-all duration-500 ${isTransitioning ? 'opacity-0 transform translate-y-8' : 'opacity-100 transform translate-y-0'
-						}`}
-				>
-					<h1 className="text-4xl md:text-5xl mb-6 text-white whitespace-pre-line">
-						{slides[currentSlide].title}
-					</h1>
-					<Link
-						to={slides[currentSlide].link}
-						className="bg-bp text-white py-3 px-8 rounded-md hover:bg-blue-700 transition min-w-40 text-center"
-					>
-						{slides[currentSlide].button}
-					</Link>
-				</div>
-			</div>
-		</div>
-	);
+  const [slide,setSlide]=useState(0);
+  const [paused,setPaused]=useState(false);
+  useEffect(()=>{if(paused||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const timer=window.setInterval(()=>setSlide(s=>(s+1)%slides.length),6500);return()=>window.clearInterval(timer);},[paused]);
+  return <section className="hero" aria-label="TerraCore ground engineering">
+    {slides.map((s,i)=><img key={s.image} className={'hero-image '+(i===slide?'is-active':'')} src={s.image} alt="" fetchPriority={i===0?'high':'auto'} loading={i===0?'eager':'lazy'}/>)}
+    <div className="hero-shade"/>
+    <div className="hero-content"><h1>{slides[slide].title}</h1><p>{slides[slide].subtitle}</p></div>
+    <div className="slide-controls"><button aria-label="Previous slide" onClick={()=>setSlide((slide+2)%3)}><ArrowLeft size={17}/></button><span>0{slide+1} / 03</span><button aria-label="Next slide" onClick={()=>setSlide((slide+1)%3)}><ArrowRight size={17}/></button><button aria-label={paused?'Play slideshow':'Pause slideshow'} onClick={()=>setPaused(!paused)}>{paused?<Play size={15}/>:<Pause size={15}/>}</button></div>
+  </section>;
 }

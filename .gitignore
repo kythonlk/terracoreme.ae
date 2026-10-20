@@ -10,6 +10,9 @@ lerna-debug.log*
 node_modules
 dist
 dist.zip
+# Original design references; optimized website assets are tracked in public/.
+/new_photos/
+/Demo_New Website.pdf
 dist-ssr
 *.local
 

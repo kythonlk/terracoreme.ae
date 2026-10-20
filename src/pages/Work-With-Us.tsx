@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 export default function WorkWithUs() {
 
-  const jobs: any = [
+  const jobs: {title: string; description: string}[] = [
     // {
     //   title: 'Civil Engineer',
     //   description: 'We are looking for an experienced civil engineer specializing in foundation works.',
@@ -34,7 +34,7 @@ export default function WorkWithUs() {
         <div className="relative h-[60vh] bg-gray-900">
           <div className="absolute inset-0 bg-cover bg-center opacity-40"
             style={{
-              backgroundImage: 'url("https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=2069&auto=format&fit=crop")'
+              backgroundImage: 'url("/photos/home-2.webp")'
             }}
           />
           <div className="relative h-full flex items-center justify-center text-center">
@@ -50,7 +50,7 @@ export default function WorkWithUs() {
           <div className="mb-16">
             <h2 className="text-2xl font-semibold text-[#005aa6] mb-6">Current Openings</h2>
             <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-              {jobs.length > 0 ? (jobs.map((job: any) => (
+              {jobs.length > 0 ? (jobs.map((job) => (
                 <div key={job.title} className="bg-white p-6 rounded-lg shadow-lg">
                   <h3 className="text-xl font-bold text-[#005aa6]">{job.title}</h3>
                   <p className="text-gray-700 mt-2">{job.description}</p>
@@ -68,7 +68,7 @@ export default function WorkWithUs() {
 
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-[#005aa6] mb-6">Apply Now</h2>
-            <iframe src="https://extraco-mailer.vercel.app/terracore/cv" width="100%" className='w-full h-[580px]' ></iframe>
+            <iframe title="Careers application form" src="https://extraco-mailer.vercel.app/terracore/cv" width="100%" className='w-full h-[580px]' ></iframe>
           </div>
         </div>
       </div>

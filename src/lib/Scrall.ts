@@ -6,9 +6,9 @@ export function ScrollToTop() {
 
   useEffect(() => {
     if (!hash) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: "instant" });
     }
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 };
